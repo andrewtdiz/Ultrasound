@@ -1,0 +1,635 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		109119E523D43AF100AA7AE9 /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 109119E423D43AF100AA7AE9 /* TestView.swift */; };
+		109119E723D4C94800AA7AE9 /* SystemList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 109119E623D4C94800AA7AE9 /* SystemList.swift */; };
+		109119EB23D4F93600AA7AE9 /* SystemObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 109119EA23D4F93600AA7AE9 /* SystemObject.swift */; };
+		109119ED23D4F96200AA7AE9 /* SystemImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 109119EC23D4F96200AA7AE9 /* SystemImage.swift */; };
+		109119EF23D4F9A500AA7AE9 /* SystemViewObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 109119EE23D4F9A500AA7AE9 /* SystemViewObject.swift */; };
+		109119F123D4FBA400AA7AE9 /* fetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 109119F023D4FBA400AA7AE9 /* fetcher.swift */; };
+		10A710B923D50357004C83B2 /* JSON.json in Resources */ = {isa = PBXBuildFile; fileRef = 10A710B823D50357004C83B2 /* JSON.json */; };
+		10C1200323D43A1A003C483A /* SystemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C1200223D43A1A003C483A /* SystemView.swift */; };
+		10DE427323D428EA00847E5F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10DE427223D428EA00847E5F /* AppDelegate.swift */; };
+		10DE427523D428EA00847E5F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10DE427423D428EA00847E5F /* SceneDelegate.swift */; };
+		10DE427723D428EA00847E5F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10DE427623D428EA00847E5F /* ContentView.swift */; };
+		10DE427923D428EB00847E5F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10DE427823D428EB00847E5F /* Assets.xcassets */; };
+		10DE427C23D428EB00847E5F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10DE427B23D428EB00847E5F /* Preview Assets.xcassets */; };
+		10DE427F23D428EB00847E5F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10DE427D23D428EB00847E5F /* LaunchScreen.storyboard */; };
+		10DE428A23D428EC00847E5F /* Ultrasound_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10DE428923D428EC00847E5F /* Ultrasound_AppTests.swift */; };
+		10DE429523D428EC00847E5F /* Ultrasound_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10DE429423D428EC00847E5F /* Ultrasound_AppUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		10DE428623D428EB00847E5F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 10DE426723D428EA00847E5F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 10DE426E23D428EA00847E5F;
+			remoteInfo = "Ultrasound App";
+		};
+		10DE429123D428EC00847E5F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 10DE426723D428EA00847E5F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 10DE426E23D428EA00847E5F;
+			remoteInfo = "Ultrasound App";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		109119E423D43AF100AA7AE9 /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
+		109119E623D4C94800AA7AE9 /* SystemList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemList.swift; sourceTree = "<group>"; };
+		109119EA23D4F93600AA7AE9 /* SystemObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemObject.swift; sourceTree = "<group>"; };
+		109119EC23D4F96200AA7AE9 /* SystemImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemImage.swift; sourceTree = "<group>"; };
+		109119EE23D4F9A500AA7AE9 /* SystemViewObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemViewObject.swift; sourceTree = "<group>"; };
+		109119F023D4FBA400AA7AE9 /* fetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fetcher.swift; sourceTree = "<group>"; };
+		10A710B823D50357004C83B2 /* JSON.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = JSON.json; path = ../JSON.json; sourceTree = "<group>"; };
+		10A710BA23D50657004C83B2 /* JSON.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = JSON.json; sourceTree = "<group>"; };
+		10C1200223D43A1A003C483A /* SystemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemView.swift; sourceTree = "<group>"; };
+		10DE426F23D428EA00847E5F /* Ultrasound App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ultrasound App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		10DE427223D428EA00847E5F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		10DE427423D428EA00847E5F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		10DE427623D428EA00847E5F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		10DE427823D428EB00847E5F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		10DE427B23D428EB00847E5F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		10DE427E23D428EB00847E5F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		10DE428023D428EB00847E5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		10DE428523D428EB00847E5F /* Ultrasound AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Ultrasound AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		10DE428923D428EC00847E5F /* Ultrasound_AppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ultrasound_AppTests.swift; sourceTree = "<group>"; };
+		10DE428B23D428EC00847E5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		10DE429023D428EC00847E5F /* Ultrasound AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Ultrasound AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		10DE429423D428EC00847E5F /* Ultrasound_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ultrasound_AppUITests.swift; sourceTree = "<group>"; };
+		10DE429623D428EC00847E5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		10DE426C23D428EA00847E5F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		10DE428223D428EB00847E5F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		10DE428D23D428EC00847E5F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		10C1200123D439F7003C483A /* System Viewer */ = {
+			isa = PBXGroup;
+			children = (
+				10C1200223D43A1A003C483A /* SystemView.swift */,
+				109119E423D43AF100AA7AE9 /* TestView.swift */,
+				109119E623D4C94800AA7AE9 /* SystemList.swift */,
+			);
+			path = "System Viewer";
+			sourceTree = "<group>";
+		};
+		10DE426623D428EA00847E5F = {
+			isa = PBXGroup;
+			children = (
+				10DE427123D428EA00847E5F /* Ultrasound App */,
+				10DE428823D428EC00847E5F /* Ultrasound AppTests */,
+				10DE429323D428EC00847E5F /* Ultrasound AppUITests */,
+				10DE427023D428EA00847E5F /* Products */,
+				10A710B823D50357004C83B2 /* JSON.json */,
+			);
+			sourceTree = "<group>";
+		};
+		10DE427023D428EA00847E5F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				10DE426F23D428EA00847E5F /* Ultrasound App.app */,
+				10DE428523D428EB00847E5F /* Ultrasound AppTests.xctest */,
+				10DE429023D428EC00847E5F /* Ultrasound AppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		10DE427123D428EA00847E5F /* Ultrasound App */ = {
+			isa = PBXGroup;
+			children = (
+				10A710BA23D50657004C83B2 /* JSON.json */,
+				10DE427223D428EA00847E5F /* AppDelegate.swift */,
+				10DE427423D428EA00847E5F /* SceneDelegate.swift */,
+				10DE427623D428EA00847E5F /* ContentView.swift */,
+				10C1200123D439F7003C483A /* System Viewer */,
+				10DE427823D428EB00847E5F /* Assets.xcassets */,
+				10DE427D23D428EB00847E5F /* LaunchScreen.storyboard */,
+				10DE428023D428EB00847E5F /* Info.plist */,
+				10DE427A23D428EB00847E5F /* Preview Content */,
+				109119EA23D4F93600AA7AE9 /* SystemObject.swift */,
+				109119EC23D4F96200AA7AE9 /* SystemImage.swift */,
+				109119EE23D4F9A500AA7AE9 /* SystemViewObject.swift */,
+				109119F023D4FBA400AA7AE9 /* fetcher.swift */,
+			);
+			path = "Ultrasound App";
+			sourceTree = "<group>";
+		};
+		10DE427A23D428EB00847E5F /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				10DE427B23D428EB00847E5F /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		10DE428823D428EC00847E5F /* Ultrasound AppTests */ = {
+			isa = PBXGroup;
+			children = (
+				10DE428923D428EC00847E5F /* Ultrasound_AppTests.swift */,
+				10DE428B23D428EC00847E5F /* Info.plist */,
+			);
+			path = "Ultrasound AppTests";
+			sourceTree = "<group>";
+		};
+		10DE429323D428EC00847E5F /* Ultrasound AppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				10DE429423D428EC00847E5F /* Ultrasound_AppUITests.swift */,
+				10DE429623D428EC00847E5F /* Info.plist */,
+			);
+			path = "Ultrasound AppUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		10DE426E23D428EA00847E5F /* Ultrasound App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 10DE429923D428EC00847E5F /* Build configuration list for PBXNativeTarget "Ultrasound App" */;
+			buildPhases = (
+				10DE426B23D428EA00847E5F /* Sources */,
+				10DE426C23D428EA00847E5F /* Frameworks */,
+				10DE426D23D428EA00847E5F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Ultrasound App";
+			productName = "Ultrasound App";
+			productReference = 10DE426F23D428EA00847E5F /* Ultrasound App.app */;
+			productType = "com.apple.product-type.application";
+		};
+		10DE428423D428EB00847E5F /* Ultrasound AppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 10DE429C23D428EC00847E5F /* Build configuration list for PBXNativeTarget "Ultrasound AppTests" */;
+			buildPhases = (
+				10DE428123D428EB00847E5F /* Sources */,
+				10DE428223D428EB00847E5F /* Frameworks */,
+				10DE428323D428EB00847E5F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				10DE428723D428EB00847E5F /* PBXTargetDependency */,
+			);
+			name = "Ultrasound AppTests";
+			productName = "Ultrasound AppTests";
+			productReference = 10DE428523D428EB00847E5F /* Ultrasound AppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		10DE428F23D428EC00847E5F /* Ultrasound AppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 10DE429F23D428EC00847E5F /* Build configuration list for PBXNativeTarget "Ultrasound AppUITests" */;
+			buildPhases = (
+				10DE428C23D428EC00847E5F /* Sources */,
+				10DE428D23D428EC00847E5F /* Frameworks */,
+				10DE428E23D428EC00847E5F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				10DE429223D428EC00847E5F /* PBXTargetDependency */,
+			);
+			name = "Ultrasound AppUITests";
+			productName = "Ultrasound AppUITests";
+			productReference = 10DE429023D428EC00847E5F /* Ultrasound AppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		10DE426723D428EA00847E5F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = "Andrew DiZenzo";
+				TargetAttributes = {
+					10DE426E23D428EA00847E5F = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+					10DE428423D428EB00847E5F = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = 10DE426E23D428EA00847E5F;
+					};
+					10DE428F23D428EC00847E5F = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = 10DE426E23D428EA00847E5F;
+					};
+				};
+			};
+			buildConfigurationList = 10DE426A23D428EA00847E5F /* Build configuration list for PBXProject "Ultrasound App" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 10DE426623D428EA00847E5F;
+			productRefGroup = 10DE427023D428EA00847E5F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				10DE426E23D428EA00847E5F /* Ultrasound App */,
+				10DE428423D428EB00847E5F /* Ultrasound AppTests */,
+				10DE428F23D428EC00847E5F /* Ultrasound AppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		10DE426D23D428EA00847E5F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				10DE427F23D428EB00847E5F /* LaunchScreen.storyboard in Resources */,
+				10DE427C23D428EB00847E5F /* Preview Assets.xcassets in Resources */,
+				10DE427923D428EB00847E5F /* Assets.xcassets in Resources */,
+				10A710B923D50357004C83B2 /* JSON.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		10DE428323D428EB00847E5F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		10DE428E23D428EC00847E5F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		10DE426B23D428EA00847E5F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				10DE427323D428EA00847E5F /* AppDelegate.swift in Sources */,
+				109119EB23D4F93600AA7AE9 /* SystemObject.swift in Sources */,
+				109119E523D43AF100AA7AE9 /* TestView.swift in Sources */,
+				109119EF23D4F9A500AA7AE9 /* SystemViewObject.swift in Sources */,
+				10DE427523D428EA00847E5F /* SceneDelegate.swift in Sources */,
+				109119F123D4FBA400AA7AE9 /* fetcher.swift in Sources */,
+				109119ED23D4F96200AA7AE9 /* SystemImage.swift in Sources */,
+				10DE427723D428EA00847E5F /* ContentView.swift in Sources */,
+				109119E723D4C94800AA7AE9 /* SystemList.swift in Sources */,
+				10C1200323D43A1A003C483A /* SystemView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		10DE428123D428EB00847E5F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				10DE428A23D428EC00847E5F /* Ultrasound_AppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		10DE428C23D428EC00847E5F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				10DE429523D428EC00847E5F /* Ultrasound_AppUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		10DE428723D428EB00847E5F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 10DE426E23D428EA00847E5F /* Ultrasound App */;
+			targetProxy = 10DE428623D428EB00847E5F /* PBXContainerItemProxy */;
+		};
+		10DE429223D428EC00847E5F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 10DE426E23D428EA00847E5F /* Ultrasound App */;
+			targetProxy = 10DE429123D428EC00847E5F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		10DE427D23D428EB00847E5F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				10DE427E23D428EB00847E5F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		10DE429723D428EC00847E5F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		10DE429823D428EC00847E5F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		10DE429A23D428EC00847E5F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Ultrasound App/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "Ultrasound App/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "UM-Med.Ultrasound-App";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		10DE429B23D428EC00847E5F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Ultrasound App/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "Ultrasound App/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "UM-Med.Ultrasound-App";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		10DE429D23D428EC00847E5F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Ultrasound AppTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "UM-Med.Ultrasound-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Ultrasound App.app/Ultrasound App";
+			};
+			name = Debug;
+		};
+		10DE429E23D428EC00847E5F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Ultrasound AppTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "UM-Med.Ultrasound-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Ultrasound App.app/Ultrasound App";
+			};
+			name = Release;
+		};
+		10DE42A023D428EC00847E5F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Ultrasound AppUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "UM-Med.Ultrasound-AppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Ultrasound App";
+			};
+			name = Debug;
+		};
+		10DE42A123D428EC00847E5F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Ultrasound AppUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "UM-Med.Ultrasound-AppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Ultrasound App";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		10DE426A23D428EA00847E5F /* Build configuration list for PBXProject "Ultrasound App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				10DE429723D428EC00847E5F /* Debug */,
+				10DE429823D428EC00847E5F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		10DE429923D428EC00847E5F /* Build configuration list for PBXNativeTarget "Ultrasound App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				10DE429A23D428EC00847E5F /* Debug */,
+				10DE429B23D428EC00847E5F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		10DE429C23D428EC00847E5F /* Build configuration list for PBXNativeTarget "Ultrasound AppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				10DE429D23D428EC00847E5F /* Debug */,
+				10DE429E23D428EC00847E5F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		10DE429F23D428EC00847E5F /* Build configuration list for PBXNativeTarget "Ultrasound AppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				10DE42A023D428EC00847E5F /* Debug */,
+				10DE42A123D428EC00847E5F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 10DE426723D428EA00847E5F /* Project object */;
+}
