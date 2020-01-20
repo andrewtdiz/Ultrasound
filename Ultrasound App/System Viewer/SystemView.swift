@@ -11,6 +11,8 @@ import SwiftUI
 struct SystemView: View {
     
     var system: SystemObject
+    var tabWidth = 60
+    var offst = 5
     
     @State var scrollState = CGFloat.zero
     @State var containerState = CGFloat.zero
@@ -28,6 +30,8 @@ struct SystemView: View {
                         .font(.footnote)
                         .foregroundColor(Color.gray)
                         Spacer()
+                        Image(system.icon).resizable()
+                        .scaledToFit().frame(width:30, height:30).offset(y:-35)
                     }.frame(minWidth: 0, maxWidth: UIScreen.main.bounds.width*(7/8))
                     HStack {
                         Text(self.system.desc)
@@ -46,12 +50,12 @@ struct SystemView: View {
                 
                     ZStack {
                         
-                        HStack(spacing: 5) {
+                        HStack(spacing: CGFloat(offst)) {
                             ForEach(0...self.system.views.count-1, id: \.self) { i in
                                 Button(action: {
                                     self.page = i
                                 }) {
-                                    Text(self.system.views[i].shortened).font(.body).foregroundColor(self.page==i ? Color.black : Color.gray).frame(width:60)
+                                    Text(self.system.views[i].shortened).font(.body).foregroundColor(self.page==i ? Color.black : Color.gray).frame(width: CGFloat(self.tabWidth))
                                 }
                             }
                         }
@@ -59,15 +63,15 @@ struct SystemView: View {
                         VStack() {
                             Spacer()
                             HStack {
-                                RoundedRectangle(cornerRadius:2).fill(Color.blue).frame(width:60, height: 2).offset(x:tabOffset(page:page, pages: system.views.count))
-                                    .offset(x:-self.scrollState*(65/UIScreen.main.bounds.width)).shadow(radius: 1, y:1).animation(.spring())
+                                RoundedRectangle(cornerRadius:2).fill(Color.blue).frame(width: CGFloat(tabWidth), height: 2).offset(x:tabOffset(page:page, pages: system.views.count, tabWidth: tabWidth, offst: offst))
+                                    .offset(x:-self.scrollState*(CGFloat(self.tabWidth+self.offst)/UIScreen.main.bounds.width)).shadow(radius: 1, y:1).animation(.spring())
                             }
                         }
                         
                     }.frame(maxHeight: 35)
                     
                 }.zIndex(10)
-            }.padding(.leading).offset(x:UIScreen.main.bounds.width/2)
+            }.padding(.horizontal).offset(x:UIScreen.main.bounds.width/2)
             
             Divider().padding(.bottom, 0)
             ZStack() {
@@ -76,12 +80,18 @@ struct SystemView: View {
                     
                     ForEach(system.views, id: \.self) { scan in ScrollView {
                             VStack {
-                                ForEach(1...200, id: \.self) { i in
-                                    Text(scan.name).font(.body).foregroundColor(Color.black).frame(width:UIScreen.main.bounds.width).multilineTextAlignment(.leading)
-                                
+                                HStack(){
+                                    Text(scan.name)
+                                        .fontWeight(.semibold)
+                                        Spacer()
+                                }
+                                HStack(){
+                                    Text(scan.desc)
+                                        .font(.body)
+                                        Spacer()
                                 }
                             
-                            }.frame(width:UIScreen.main.bounds.width)
+                            }.padding(.horizontal).frame(width:UIScreen.main.bounds.width)
                         }
                         .frame(minHeight: 0, maxHeight: .infinity)
                     }
@@ -143,11 +153,13 @@ func calcOffset(page: Int, pages: Int) -> CGFloat {
     
 }
 
-func tabOffset(page: Int, pages: Int) -> CGFloat {
+func tabOffset(page: Int, pages: Int, tabWidth: Int, offst: Int) -> CGFloat {
     if(pages%2==0) {
-        return  CGFloat(-35 + (page-((pages/2)-1))*(65))
+        let first = -1*CGFloat(tabWidth/2 + offst)
+        let second = (CGFloat(page-((pages/2)-1)))*CGFloat(tabWidth + offst)
+        return  CGFloat(first + second)
     } else {
-        return CGFloat(page-Int(Double(pages/2) + 0.5))*(65)
+        return CGFloat(page-Int(Double(pages/2) + 0.5))*CGFloat((tabWidth + offst))
     }
     
 }

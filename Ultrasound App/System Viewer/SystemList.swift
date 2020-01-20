@@ -9,27 +9,91 @@
 import SwiftUI
 
 struct SystemList: View {
-    
-    var body: some View {
+    var spacing = 20
+     var systemsDataEven = systemsData.filter({ $0.id % 2 == 0 })
+     var systemsDataOdd = systemsData.filter({ $0.id % 2 != 0 })
+     var body: some View {
         NavigationView {
             
-            VStack {
-                ForEach(systemsData, id: \.id) { system in
-                    NavigationLink(destination: SystemView(system: system)
-                    ) {
-                        VStack() {
-                            Image(systemName: system.image).foregroundColor(Color.white)
-                            Text(system.name)
-                                .font(.headline)
-                                .foregroundColor(Color.white)
+            ScrollView {
+                HStack {
+                    VStack(spacing: CGFloat(spacing)) {
+                        ForEach(systemsDataEven, id: \.id) { system in
+                            NavigationLink(destination: SystemView(system: system)
+                            ) {
+                                ZStack() {
+                                    Image(system.views[0].images[0].image).renderingMode(.original).resizable().frame(maxHeight:.infinity).offset(y:-40)
+                                    VStack {
+                                        Spacer()
+                                        VStack {
+                                            HStack {
+                                                VStack {
+                                                    Spacer()
+                                                    HStack {
+                                                        Image(system.icon).renderingMode(.original)
+                                                        .resizable()
+                                                        .scaledToFit()
+                                                            .frame(width: 15, height: 15)
+                                                        Text(system.name)
+                                                        .font(.footnote)
+                                                            .fontWeight(.medium)
+                                                            .foregroundColor(Color.black)
+                                                        Spacer()
+                                                       
+                                                    }
+                                                    Spacer()
+                                                }
+                                                Spacer()
+                                            }
+                                            .padding(.leading)
+                                        }.frame(height:40).background(Color.gray.opacity(0.3))
+                                    }.zIndex(2)
+                                    
+                                }.frame(width: (UIScreen.main.bounds.width/2)-40, height: (UIScreen.main.bounds.width/2)-40).background(Color.white).cornerRadius(5).clipped().shadow(color: Color.gray.opacity(0.5),radius: 5, y:3)
+                            }
+                        }
+                    }.navigationBarTitle(Text("Body Systems"))
+                    Spacer().frame(width: CGFloat(spacing))
+                    VStack(spacing: CGFloat(spacing)) {
+                        ForEach(systemsDataOdd, id: \.id) { system in
+                            NavigationLink(destination: SystemView(system: system)
+                            ) {
+                                ZStack() {
+                                    Image(system.views[0].images[0].image).renderingMode(.original).resizable().frame(maxHeight:200).offset(y:-40)
+                                    Spacer()
+                                    VStack {
+                                        Spacer()
+                                        VStack {
+                                            HStack {
+                                                VStack {
+                                                    Spacer()
+                                                    HStack {
+                                                        Image(system.icon).renderingMode(.original)
+                                                        .resizable()
+                                                        .scaledToFit()
+                                                            .frame(width: 15, height: 15)
+                                                        Text(system.name)
+                                                        .font(.footnote)
+                                                            .fontWeight(.medium)
+                                                            .foregroundColor(Color.black)
+                                                        Spacer()
+                                                       
+                                                    }
+                                                    Spacer()
+                                                }
+                                                Spacer()
+                                            }
+                                            .padding(.leading)
+                                        }.frame(height:40).background(Color.gray.opacity(0.2))
+                                    }
+                                    
+                                }.frame(width: (UIScreen.main.bounds.width/2)-40, height: (UIScreen.main.bounds.width/2)-40).background(Color.white).cornerRadius(5).clipped().shadow(color: Color.gray.opacity(0.5),radius: 5, y:3)
+                            }
                             
-                        }.frame(width: (UIScreen.main.bounds.width/2)-10, height: (UIScreen.main.bounds.width/2)-10).background(Color.blue).cornerRadius(5).clipped().shadow(color: Color.gray.opacity(0.5),radius: 5, y:3)
-                    }
-                    .padding(.top)
-                }
-                
-                Spacer()
-            }.padding(.horizontal).navigationBarTitle(Text("Body Systems"))
+                        }
+                    }.navigationBarTitle(Text("Body Systems"))
+                }.frame(maxWidth:.infinity).padding(.top, 20).padding(.bottom, 50)
+            }
         }
     }
         

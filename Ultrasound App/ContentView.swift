@@ -21,11 +21,11 @@ struct ContentView: View {
                     }
                 }
                 .tag(0)
-            Text("Second View")
+            SystemListed()
                 .font(.title)
                 .tabItem {
                     VStack {
-                        Image(systemName: "person.fill")
+                        Image(systemName: "list.dash")
                     }
                 }
                 .tag(1)

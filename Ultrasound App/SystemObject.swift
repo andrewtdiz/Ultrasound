@@ -15,5 +15,6 @@ struct SystemObject : Codable, Hashable, Identifiable {
     var desc: String
     var views: [SystemViewObject]
     var updated: String
+    var icon: String
     
 }

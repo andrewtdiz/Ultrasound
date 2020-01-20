@@ -1,56 +1,319 @@
 [{
     "id" : 0,
-    "name": "Parasternal Long Axis",
-    "shortened": "PSTL",
+    "name": "A Clip",
+    "shortened": "ACLIP",
     "systemID" : 0,
-    "desc": "",
+    "desc": "Transverse video clip sweeping through the aorta (from SMA to iliacs).\nInclude measurement of largest diameter",
     "images": [],
 },
 {
     "id" : 1,
-    "name": "Parasternal Short Axis",
-    "shortened": "PSTL",
+    "name": "Proximal Aorta",
+    "shortened": "ProxAo",
     "systemID" : 0,
-    "desc": "",
+    "desc": "One of four transverse still views (Proximal, Mid, Distal, and Bifurcation). ",
     "images": [],
 },
 {
     "id" : 2,
-    "name": "Apical Four Chamber",
-    "shortened": "A4L",
+    "name": "Mid Aorta",
+    "shortened": "MidAo",
     "systemID" : 0,
-    "desc": "",
+    "desc": "One of four transverse still views (Proximal, Mid, Distal, and Bifurcation).",
     "images": [],
 },
 {
     "id" : 3,
-    "name": "Subxiphoid",
-    "shortened": "SXP",
+    "name": "Distal Aorta",
+    "shortened": "DistAo",
     "systemID" : 0,
-    "desc": "",
+    "desc": "One of four transverse still views (Proximal, Mid, Distal, and Bifurcation).",
     "images": [],
 },
 {
     "id" : 4,
-    "name": "Normal",
-    "shortened": "NRML",
-    "systemID" : 1,
-    "desc": "",
+    "name": "Bifurcation of Aorta",
+    "shortened": "BifurAo",
+    "systemID" : 0,
+    "desc": "One of four transverse still views (Proximal, Mid, Distal, and Bifurcation).",
     "images": [],
 },
 {
     "id" : 5,
-    "name": "Retinal Detachment",
-    "shortened": "Detach",
+    "name": "Longitudinal Aorta",
+    "shortened": "LongAo",
+    "systemID" : 0,
+    "desc": "Longitudinal view of the Aorta (clip or still)",
+    "images": [],
+},
+
+
+
+
+
+{
+    "id" : 6,
+    "name": "Gallbladder Sweep",
+    "shortened": "GBSweep",
     "systemID" : 1,
+    "desc": "Sweeping through the gallbladder",
+    "images": [],
+},
+{
+    "id" : 7,
+    "name": "Gallbladder Stills",
+    "shortened": "GBStill",
+    "systemID" : 1,
+    "desc": "Two orthogonal stills (though clips are preferred)",
+    "images": [],
+},
+{
+    "id" : 8,
+    "name": "Gallbladder Wall",
+    "shortened": "GBWall",
+    "systemID" : 1,
+    "desc": "Must have measurement of anterior wall",
+    "images": [],
+},
+
+
+
+
+
+{
+    "id" : 9,
+    "name": "Parasternal Long Axis",
+    "shortened": "PSTL",
+    "systemID" : 2,
     "desc": "",
     "images": [],
 },
 {
-    "id" : 6,
-    "name": "Optic Nerve",
-    "shortened": "OptN",
-    "systemID" : 1,
+    "id" : 10,
+    "name": "Parasternal Short Axis",
+    "shortened": "PSTS",
+    "systemID" : 2,
     "desc": "",
     "images": [],
-}]
+},
+{
+    "id" : 11,
+    "name": "Apical Four Chamber",
+    "shortened": "A4L",
+    "systemID" : 2,
+    "desc": "",
+    "images": [],
+},
+{
+    "id" : 12,
+    "name": "Subxiphoid",
+    "shortened": "SXP",
+    "systemID" : 2,
+    "desc": "",
+    "images": [],
+},
+
+
+
+
+{
+    "id" : 13,
+    "name": "Femoral Vein",
+    "shortened": "FemV",
+    "systemID" : 3,
+    "desc": "Must include either stills or videos of compression from the saphenofemoral junction through the bifurcation of the common femoral vein to superficial and deep",
+    "images": [],
+},
+{
+    "id" : 14,
+    "name": "Popliteal Vein",
+    "shortened": "PLitV",
+    "systemID" : 3,
+    "desc": "Must include the popliteal vein throught the bifurcation",
+    "images": [],
+},
+
+
+
+
+{
+    "id" : 15,
+    "name": "Right Upper Quadrant",
+    "shortened": "RUQ",
+    "systemID" : 4,
+    "desc": "Must show:\n\u2022 Morrison's Pouch\n\u2022 Inferior renal pole\n\u2022 Diaphragm",
+    "images": [],
+},
+{
+    "id" : 16,
+    "name": "Left Upper Quadrant",
+    "shortened": "LUQ",
+    "systemID" : 4,
+    "desc": "Must show:\n\u2022 Splenorenal space\n\u2022 Caudal spleen tip\n\u2022 Diaphragm",
+    "images": [],
+},
+{
+    "id" : 17,
+    "name": "Pelvis",
+    "shortened": "Pelv",
+    "systemID" : 4,
+    "desc": "Sagittal bladder view. Fna thorugh sagittal bladder left to right",
+    "images": [],
+},
+{
+    "id" : 18,
+    "name": "Subxiphoid",
+    "shortened": "SXP",
+    "systemID" : 4,
+    "desc": "Assess for pericardial effusion. Could be any other cardial views (need two).",
+    "images": [],
+},
+{
+    "id" : 19,
+    "name": "Parasternal Short",
+    "shortened": "PSTS",
+    "systemID" : 4,
+    "desc": "Assess for pericardial effusion. Could be any other cardial views (need two).",
+    "images": [],
+},
+
+
+
+
+{
+    "id" : 20,
+    "name": "Pneumothroax Assessment Clip",
+    "shortened": "PTXc",
+    "systemID" : 5,
+    "desc": "Looking for lung sliding. Recall, stills saved for pneumothorax must be m-mode",
+    "images": [],
+},
+{
+    "id" : 21,
+    "name": "Pneumothroax Assessment Still",
+    "shortened": "PTXs",
+    "systemID" : 5,
+    "desc": "Looking for lung sliding. Stills are saved for pneumothorax must be m-mode",
+    "images": [],
+},
+{
+    "id" : 22,
+    "name": "Interstitial Fluid Assessment",
+    "shortened": "IF",
+    "systemID" : 5,
+    "desc": "Use low frequency probe to look for B-lines. Set depth to 18cm.",
+    "images": [],
+},
+{
+    "id" : 23,
+    "name": "Pleural Effusion Assessment",
+    "shortened": "PEf",
+    "systemID" : 5,
+    "desc": "Look for continuous spine sign.",
+    "images": [],
+},
+
+
+
+
+{
+    "id" : 24,
+    "name": "Uterus",
+    "shortened": "Uterus",
+    "systemID" : 6,
+    "desc": "Must show endometrial stripe and posterior cul de sac",
+    "images": [],
+},
+{
+    "id" : 25,
+    "name": "Fetal Heart Rate Measurement",
+    "shortened": "FHR",
+    "systemID" : 6,
+    "desc": "If FHR measured, must use M-mode. Avoid pulse wave doppler",
+    "images": [],
+},
+{
+    "id" : 26,
+    "name": "Intrauterine Pregnancy",
+    "shortened": "IUP",
+    "systemID" : 6,
+    "desc": "Intrauterine pregnacy is confirmed by the presence of yolk sac, fetal pole, or fetal heart rate.\nGestational sac alone is NOT enough to confirm IUP.",
+    "images": [],
+},
+
+
+
+
+{
+    "id" : 27,
+    "name": "Normal",
+    "shortened": "Normal",
+    "systemID" : 7,
+    "desc": "",
+    "images": [],
+},
+{
+    "id" : 28,
+    "name": "Retinal Detachment",
+    "shortened": "RD",
+    "systemID" : 7,
+    "desc": "",
+    "images": [],
+},
+{
+    "id" : 29,
+    "name": "Enlargened Optic Nerve Sheath Diameter",
+    "shortened": "ONerve",
+    "systemID" : 7,
+    "desc": "",
+    "images": [],
+},
+
+
+
+
+{
+    "id" : 30,
+    "name": "Longitudinal and Transverse Kidney",
+    "shortened": "Kdny",
+    "systemID" : 8,
+    "desc": "",
+    "images": [],
+},
+{
+    "id" : 31,
+    "name": "Longitudinal and Transverse Bladder",
+    "shortened": "Blad",
+    "systemID" : 8,
+    "desc": "",
+    "images": [],
+},
+{
+    "id" : 32,
+    "name": "Doppler (hydronephrosis vs. renal vessels)",
+    "shortened": "Dop",
+    "systemID" : 8,
+    "desc": "",
+    "images": [],
+},
+
+
+
+{
+    "id" : 33,
+    "name": "Cellulitis with Cobblestoning",
+    "shortened": "Cell",
+    "systemID" : 9,
+    "desc": "",
+    "images": [],
+},
+{
+    "id" : 34,
+    "name": "Doppler (hydronephrosis vs. renal vessels)",
+    "shortened": "Abs",
+    "systemID" : 9,
+    "desc": "",
+    "images": [],
+},
+
+]
