@@ -3,7 +3,7 @@
     "name": "A Clip",
     "shortened": "ACLIP",
     "systemID" : 0,
-    "desc": "Transverse video clip sweeping through the aorta (from SMA to iliacs).\nInclude measurement of largest diameter",
+    "desc": "",
     "images": [],
 },
 {
@@ -274,7 +274,7 @@
 
 {
     "id" : 30,
-    "name": "Longitudinal and Transverse Kidney",
+    "name": "Kidney (Longitudinal and Transverse)",
     "shortened": "Kdny",
     "systemID" : 8,
     "desc": "",
@@ -282,7 +282,7 @@
 },
 {
     "id" : 31,
-    "name": "Longitudinal and Transverse Bladder",
+    "name": "Bladder (Longitudinal and Transverse)",
     "shortened": "Blad",
     "systemID" : 8,
     "desc": "",
@@ -290,7 +290,7 @@
 },
 {
     "id" : 32,
-    "name": "Doppler (hydronephrosis vs. renal vessels)",
+    "name": "Doppler (Hydronephrosis vs. Renal Vessels)",
     "shortened": "Dop",
     "systemID" : 8,
     "desc": "",

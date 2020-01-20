@@ -22,126 +22,130 @@ struct SystemView: View {
     var changePageDist = UIScreen.main.bounds.width/4
     var body: some View {
         
-        VStack {
-            VStack() {
-                HStack {
-                    VStack(alignment: .leading) {
-                        HStack {
-                            Text("LAST UPDATED " + self.system.updated.uppercased())
-                            .font(.footnote)
-                            .foregroundColor(Color.gray)
-                            Spacer()
-                            Image(system.icon).resizable()
-                            .scaledToFit().frame(width:30, height:30).offset(y:-35)
-                        }.frame(minWidth: 0, maxWidth: UIScreen.main.bounds.width*(7/8))
-                        HStack {
-                            Text(self.system.desc)
-                                .multilineTextAlignment(.leading)
-                                .lineLimit(nil)
-                                .font(.footnote).padding(.top, 5)
-                            Spacer()
-                        }.frame(minWidth: 0, maxWidth: UIScreen.main.bounds.width*(7/8)).padding(.top, -5)
+        ScrollView {
+            VStack {
+                VStack() {
+                    HStack {
+                        VStack(alignment: .leading) {
+                            HStack {
+                                Text("LAST UPDATED " + self.system.updated.uppercased())
+                                .font(.footnote)
+                                .foregroundColor(Color.gray)
+                                Spacer()
+                                Image(system.icon).resizable()
+                                .scaledToFit().frame(width:30, height:30).offset(y:-35)
+                            }.frame(minWidth: 0, maxWidth: UIScreen.main.bounds.width*(7/8))
+                            HStack {
+                                Text(self.system.desc)
+                                    .multilineTextAlignment(.leading)
+                                    .lineLimit(nil)
+                                    .font(.footnote).padding(.top, 5)
+                                Spacer()
+                            }.frame(minWidth: 0, maxWidth: UIScreen.main.bounds.width*(7/8)).padding(.top, -10)
 
-                    }
-                    Spacer()
-                }.padding(.leading, 20).offset(x:UIScreen.main.bounds.width/2)
+                        }
+                        Spacer()
+                    }.padding(.leading, 20).offset(x:UIScreen.main.bounds.width/2)
 
-                ScrollView(.horizontal, showsIndicators: false) {
-                    VStack() {
-                    
-                        ZStack {
-                            
-                            HStack(spacing: CGFloat(offst)) {
-                                ForEach(0...self.system.views.count-1, id: \.self) { i in
-                                    Button(action: {
-                                        self.page = i
-                                    }) {
-                                        Text(self.system.views[i].shortened).font(.body).foregroundColor(self.page==i ? Color.black : Color.gray).frame(width: CGFloat(self.tabWidth))
+                    ScrollView(.horizontal, showsIndicators: false) {
+                        VStack() {
+                        
+                            ZStack {
+                                
+                                HStack(spacing: CGFloat(offst)) {
+                                    ForEach(0...self.system.views.count-1, id: \.self) { i in
+                                        Button(action: {
+                                            self.page = i
+                                        }) {
+                                            Text(self.system.views[i].shortened).font(.body).foregroundColor(self.page==i ? Color.black : Color.gray).frame(width: CGFloat(self.tabWidth))
+                                        }
                                     }
                                 }
-                            }
-                        
-                            VStack() {
-                                Spacer()
-                                HStack {
-                                    RoundedRectangle(cornerRadius:2).fill(Color.blue).frame(width: CGFloat(tabWidth), height: 2).offset(x:tabOffset(page:page, pages: system.views.count, tabWidth: tabWidth, offst: offst))
-                                        .offset(x:-self.scrollState*(CGFloat(self.tabWidth+self.offst)/UIScreen.main.bounds.width)).shadow(radius: 1, y:1).animation(.spring())
-                                }
-                            }
                             
-                        }.frame(maxHeight: 35)
-                        
-                    }.zIndex(10)
-                }.padding(.horizontal).offset(x:UIScreen.main.bounds.width/2).animation(.none)
-                
-                Divider().padding(.vertical, -8.0)
-            }
-            ZStack() {
-                
-                HStack(spacing:0) {
+                                VStack() {
+                                    Spacer()
+                                    HStack {
+                                        RoundedRectangle(cornerRadius:2).fill(Color.blue).frame(width: CGFloat(tabWidth), height: 2).offset(x:tabOffset(page:page, pages: system.views.count, tabWidth: tabWidth, offst: offst))
+                                            .offset(x:-self.scrollState*(CGFloat(self.tabWidth+self.offst)/UIScreen.main.bounds.width)).shadow(radius: 1, y:1).animation(.spring())
+                                    }
+                                }
+                                
+                            }.frame(maxHeight: 35)
+                            
+                        }.zIndex(10)
+                    }.padding(.horizontal).offset(x:UIScreen.main.bounds.width/2).animation(.none)
                     
-                    ForEach(system.views, id: \.self) { scan in ScrollView {
-                            VStack {
-                                HStack(){
-                                    Text(scan.name)
-                                        .font(.headline)
-                                        .fontWeight(.semibold)
-                                        Spacer()
-                                }
-                                HStack(){
-                                    Text(scan.desc)
-                                        .font(.body)
-                                        Spacer()
-                                }
-                                if (!scan.images.isEmpty) {
-                                    Image(scan.images[0].image).resizable().scaledToFit().frame(width: UIScreen.main.bounds.width*3/4).cornerRadius(5)
-                                    Text(scan.images[0].desc).font(.body)
+                    Divider().padding(.vertical, -8.0)
+                }
+                ZStack() {
+                    
+                    HStack(spacing:0) {
+                        
+                        ForEach(system.views, id: \.self) { scan in ScrollView {
+                                VStack {
+                                    HStack(){
+                                        Text(scan.name)
+                                            .font(.headline)
+                                            .fontWeight(.semibold)
+                                            Spacer()
+                                    }
+                                    HStack(){
+                                        Text(scan.desc).font(.caption).fontWeight(.regular).foregroundColor(Color.black.opacity(0.7))
+                                            Spacer()
+                                    }
+                                   
+                                    if (!scan.images.isEmpty) {
+                                        VStack() { Image(scan.images[0].image).resizable().scaledToFit().cornerRadius(3).frame(width: UIScreen.main.bounds.width*4/5)
+                                            Text(scan.images[0].desc).font(.caption).fontWeight(.regular).foregroundColor(Color.black.opacity(0.7))
+                                            
+                                        }.frame(width: UIScreen.main.bounds.width*4/5).padding(.vertical)
+                                    }
+                                   
+                                Spacer()
+                                }.padding(.horizontal).padding(.top, 15).padding(.bottom, 500).frame(width:UIScreen.main.bounds.width)
+                        }.offset(y:-15)
+                            .frame(minHeight: 0).frame(maxHeight: UIScreen.main.bounds.height*(0.7))
+                        }
+                    }.frame(width:UIScreen.main.bounds.width*2)
+
+                        .offset(x:calcOffset(page:page, pages: system.views.count))
+                        .offset(x:innerScrolling==true ? scrollState : CGFloat.zero)
+                        
+                    
+                }.background(Color.white)
+                    .animation(.spring())
+                        .gesture(
+                            DragGesture()
+                            .onChanged { value in
+                                if(Int(value.startLocation.x) > 215) {
+                                    self.startLoc = value.startLocation
+                                    self.innerScrolling = true
+                                    self.scrollState = value.translation.width
                                 }
                                
-                            Spacer()
-                            }.padding(.horizontal).padding(.top, 15).padding(.bottom, 500).frame(width:UIScreen.main.bounds.width)
-                    }.offset(y:-15)
-                        .frame(minHeight: 0, maxHeight: .infinity)
-                    }
-                }.frame(width:UIScreen.main.bounds.width*2)
-
-                    .offset(x:calcOffset(page:page, pages: system.views.count))
-                    .offset(x:innerScrolling==true ? scrollState : CGFloat.zero)
-                    
-                
-            }.background(Color.white)
-                .animation(.spring())
-                    .gesture(
-                        DragGesture()
-                        .onChanged { value in
-                            if(Int(value.startLocation.x) > 215) {
-                                self.startLoc = value.startLocation
-                                self.innerScrolling = true
-                                self.scrollState = value.translation.width
-                            }
-                           
-                            
-                           
-                        }
-                        .onEnded { value in
-                            if((self.scrollState < -1*self.changePageDist)) {
                                 
-                                if(self.page != (self.system.views.count-1)) {
-                                    self.page = self.page + 1
+                               
+                            }
+                            .onEnded { value in
+                                if((self.scrollState < -1*self.changePageDist)) {
+                                    
+                                    if(self.page != (self.system.views.count-1)) {
+                                        self.page = self.page + 1
+                                    }
+                                    
+                                } else if(self.scrollState > self.changePageDist) {
+                                    
+                                    if(self.page != 0) {
+                                        self.page = self.page - 1
+                                    }
                                 }
                                 
-                            } else if(self.scrollState > self.changePageDist) {
-                                
-                                if(self.page != 0) {
-                                    self.page = self.page - 1
-                                }
+                                self.scrollState = 0
+                                self.innerScrolling = false
                             }
-                            
-                            self.scrollState = 0
-                            self.innerScrolling = false
-                        }
-            )
-        }.offset(y:-7).navigationBarTitle(Text(system.name))
+                )
+            }.offset(y:-7).navigationBarTitle(Text(system.name))
+        }
             
     }
     }
