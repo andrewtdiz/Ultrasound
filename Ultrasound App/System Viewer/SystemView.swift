@@ -23,57 +23,59 @@ struct SystemView: View {
     var body: some View {
         
         VStack {
-            HStack {
-                VStack(alignment: .leading) {
-                    HStack {
-                        Text("LAST UPDATED " + self.system.updated.uppercased())
-                        .font(.footnote)
-                        .foregroundColor(Color.gray)
-                        Spacer()
-                        Image(system.icon).resizable()
-                        .scaledToFit().frame(width:30, height:30).offset(y:-35)
-                    }.frame(minWidth: 0, maxWidth: UIScreen.main.bounds.width*(7/8))
-                    HStack {
-                        Text(self.system.desc)
-                            .multilineTextAlignment(.leading)
-                            .lineLimit(nil)
-                            .font(.footnote).padding(.top, 10)
-                        Spacer()
-                    }.frame(minWidth: 0, maxWidth: UIScreen.main.bounds.width*(7/8))
+            VStack() {
+                HStack {
+                    VStack(alignment: .leading) {
+                        HStack {
+                            Text("LAST UPDATED " + self.system.updated.uppercased())
+                            .font(.footnote)
+                            .foregroundColor(Color.gray)
+                            Spacer()
+                            Image(system.icon).resizable()
+                            .scaledToFit().frame(width:30, height:30).offset(y:-35)
+                        }.frame(minWidth: 0, maxWidth: UIScreen.main.bounds.width*(7/8))
+                        HStack {
+                            Text(self.system.desc)
+                                .multilineTextAlignment(.leading)
+                                .lineLimit(nil)
+                                .font(.footnote).padding(.top, 5)
+                            Spacer()
+                        }.frame(minWidth: 0, maxWidth: UIScreen.main.bounds.width*(7/8)).padding(.top, -5)
 
-                }
-                Spacer()
-            }.padding(.leading, 20.0).offset(x:UIScreen.main.bounds.width/2)
+                    }
+                    Spacer()
+                }.padding(.leading, 20).offset(x:UIScreen.main.bounds.width/2)
 
-            ScrollView(.horizontal, showsIndicators: false) {
-                VStack() {
-                
-                    ZStack {
-                        
-                        HStack(spacing: CGFloat(offst)) {
-                            ForEach(0...self.system.views.count-1, id: \.self) { i in
-                                Button(action: {
-                                    self.page = i
-                                }) {
-                                    Text(self.system.views[i].shortened).font(.body).foregroundColor(self.page==i ? Color.black : Color.gray).frame(width: CGFloat(self.tabWidth))
+                ScrollView(.horizontal, showsIndicators: false) {
+                    VStack() {
+                    
+                        ZStack {
+                            
+                            HStack(spacing: CGFloat(offst)) {
+                                ForEach(0...self.system.views.count-1, id: \.self) { i in
+                                    Button(action: {
+                                        self.page = i
+                                    }) {
+                                        Text(self.system.views[i].shortened).font(.body).foregroundColor(self.page==i ? Color.black : Color.gray).frame(width: CGFloat(self.tabWidth))
+                                    }
                                 }
                             }
-                        }
-                    
-                        VStack() {
-                            Spacer()
-                            HStack {
-                                RoundedRectangle(cornerRadius:2).fill(Color.blue).frame(width: CGFloat(tabWidth), height: 2).offset(x:tabOffset(page:page, pages: system.views.count, tabWidth: tabWidth, offst: offst))
-                                    .offset(x:-self.scrollState*(CGFloat(self.tabWidth+self.offst)/UIScreen.main.bounds.width)).shadow(radius: 1, y:1).animation(.spring())
-                            }
-                        }
                         
-                    }.frame(maxHeight: 35)
-                    
-                }.zIndex(10)
-            }.padding(.horizontal).offset(x:UIScreen.main.bounds.width/2)
-            
-            Divider().padding(.bottom, 0)
+                            VStack() {
+                                Spacer()
+                                HStack {
+                                    RoundedRectangle(cornerRadius:2).fill(Color.blue).frame(width: CGFloat(tabWidth), height: 2).offset(x:tabOffset(page:page, pages: system.views.count, tabWidth: tabWidth, offst: offst))
+                                        .offset(x:-self.scrollState*(CGFloat(self.tabWidth+self.offst)/UIScreen.main.bounds.width)).shadow(radius: 1, y:1).animation(.spring())
+                                }
+                            }
+                            
+                        }.frame(maxHeight: 35)
+                        
+                    }.zIndex(10)
+                }.padding(.horizontal).offset(x:UIScreen.main.bounds.width/2).animation(.none)
+                
+                Divider().padding(.vertical, -8.0)
+            }
             ZStack() {
                 
                 HStack(spacing:0) {
@@ -82,6 +84,7 @@ struct SystemView: View {
                             VStack {
                                 HStack(){
                                     Text(scan.name)
+                                        .font(.headline)
                                         .fontWeight(.semibold)
                                         Spacer()
                                 }
@@ -90,9 +93,14 @@ struct SystemView: View {
                                         .font(.body)
                                         Spacer()
                                 }
-                            
-                            }.padding(.horizontal).frame(width:UIScreen.main.bounds.width)
-                        }
+                                if (!scan.images.isEmpty) {
+                                    Image(scan.images[0].image).resizable().scaledToFit().frame(width: UIScreen.main.bounds.width*3/4).cornerRadius(5)
+                                    Text(scan.images[0].desc).font(.body)
+                                }
+                               
+                            Spacer()
+                            }.padding(.horizontal).padding(.top, 15).padding(.bottom, 500).frame(width:UIScreen.main.bounds.width)
+                    }.offset(y:-15)
                         .frame(minHeight: 0, maxHeight: .infinity)
                     }
                 }.frame(width:UIScreen.main.bounds.width*2)

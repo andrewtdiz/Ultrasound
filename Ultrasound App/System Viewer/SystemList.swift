@@ -46,7 +46,7 @@ struct SystemList: View {
                                                 Spacer()
                                             }
                                             .padding(.leading)
-                                        }.frame(height:40).background(Color.gray.opacity(0.3))
+                                        }.frame(height:40).background(Color.white)
                                     }.zIndex(2)
                                     
                                 }.frame(width: (UIScreen.main.bounds.width/2)-40, height: (UIScreen.main.bounds.width/2)-40).background(Color.white).cornerRadius(5).clipped().shadow(color: Color.gray.opacity(0.5),radius: 5, y:3)
@@ -84,7 +84,7 @@ struct SystemList: View {
                                                 Spacer()
                                             }
                                             .padding(.leading)
-                                        }.frame(height:40).background(Color.gray.opacity(0.2))
+                                        }.frame(height:40).background(Color.white)
                                     }
                                     
                                 }.frame(width: (UIScreen.main.bounds.width/2)-40, height: (UIScreen.main.bounds.width/2)-40).background(Color.white).cornerRadius(5).clipped().shadow(color: Color.gray.opacity(0.5),radius: 5, y:3)

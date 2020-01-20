@@ -13,7 +13,7 @@ struct ContentView: View {
  
     var body: some View {
         TabView(selection: $selection){
-            SystemList()
+            SystemListed()
                 .font(.title)
                 .tabItem {
                     VStack {
@@ -21,7 +21,7 @@ struct ContentView: View {
                     }
                 }
                 .tag(0)
-            SystemListed()
+            SystemList()
                 .font(.title)
                 .tabItem {
                     VStack {
