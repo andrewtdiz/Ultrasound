@@ -7,20 +7,15 @@
 //
 
 import Foundation
-import SwiftUI
 
-class SystemViewObject {
+struct SystemViewObject : Codable, Hashable, Identifiable {
+    var id: Int
+
     var name: String
     var shortened: String
+    var systemID: Int
     var desc: String
     var images: [SystemImage]
     
-    init(name: String, shortened: String, desc: String, images: [SystemImage]) {
-        self.name = name
-        self.shortened = shortened
-        self.desc = desc
-        self.images = images
-        
-        
-    }
+    
 }

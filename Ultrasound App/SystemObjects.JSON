@@ -1,0 +1,16 @@
+[{
+    "id": 0,
+    "name": "Cardiovascular",
+    "image": "heart.fill",
+    "desc": "Requires at least 2 of the following 4 views:",
+    "views": [],
+    "updated": "one month ago",
+},{
+    "id": 1,
+    "name": "Ocular",
+    "image": "eye.fill",
+    "desc": "Requires at least 2 of the following 4 views:",
+    "views": [],
+    "updated": "one week ago",
+}]
+

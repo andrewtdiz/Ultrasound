@@ -9,38 +9,30 @@
 import SwiftUI
 
 struct SystemList: View {
+    
     var body: some View {
         NavigationView {
             
             VStack {
-                HStack {
-                    NavigationLink(destination: SystemView(scans: ["PSL", "PSS", "A4C", "SXP"], name: "Cardiac", desc: "Requires at least 2 of the following 4 views:")) {
+                ForEach(systemsData, id: \.id) { system in
+                    NavigationLink(destination: SystemView(system: system)
+                    ) {
                         VStack() {
-                            Image(systemName: "heart.fill").foregroundColor(Color.white)
-                            Text("Cardiac")
+                            Image(systemName: system.image).foregroundColor(Color.white)
+                            Text(system.name)
                                 .font(.headline)
                                 .foregroundColor(Color.white)
                             
                         }.frame(width: (UIScreen.main.bounds.width/2)-10, height: (UIScreen.main.bounds.width/2)-10).background(Color.blue).cornerRadius(5).clipped().shadow(color: Color.gray.opacity(0.5),radius: 5, y:3)
                     }
                     .padding(.top)
-                    NavigationLink(destination: SystemView(scans: ["NRML", "Detach", "OptN"], name: "Ocular", desc:"Orthogonal stills or video showing area of interest.\nUse ocular settings when available.")) {
-                        VStack() {
-                            Image(systemName: "eye.fill").foregroundColor(Color.white)
-                            Text("Ocular")
-                                .font(.headline)
-                                .foregroundColor(Color.white)
-                            
-                        }.frame(width: (UIScreen.main.bounds.width/2)-10, height: (UIScreen.main.bounds.width/2)-10).background(Color.orange).cornerRadius(5).clipped().shadow(color: Color.gray.opacity(0.5),radius: 5, y:3)
-                    }
-                    .padding(.top)
                 }
-                .padding(.horizontal)
+                
                 Spacer()
-            }.navigationBarTitle(Text("Body Systems"))
+            }.padding(.horizontal).navigationBarTitle(Text("Body Systems"))
         }
-        
     }
+        
 }
 
 

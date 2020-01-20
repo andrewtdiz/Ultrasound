@@ -29,7 +29,7 @@ struct ContentView: View {
                     }
                 }
                 .tag(1)
-            Text("Third View")
+            InfoScreen()
             .font(.title)
             .tabItem {
                 VStack {

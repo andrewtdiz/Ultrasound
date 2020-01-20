@@ -1,0 +1,22 @@
+[{
+    "id" : 0,
+    "name": "PSTL1",
+    "image": "PSTL1",
+    "viewID": 0,
+    "desc": "First view of the Parasternal Long Axis",
+},
+{
+    "id" : 1,
+    "name": "PSTL2",
+    "image": "PSTL2",
+    "viewID": 0,
+    "desc": "Second view of the Parasternal Long Axis",
+},
+{
+    "id" : 2,
+    "name": "PSTS1",
+    "image": "PSTL1",
+    "viewID": 1,
+    "desc": "First view of the Parasternal Short Axis",
+}
+]

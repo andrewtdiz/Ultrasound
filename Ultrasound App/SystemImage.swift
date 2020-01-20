@@ -7,17 +7,14 @@
 //
 
 import Foundation
-import SwiftUI
 
-class SystemImage {
+struct SystemImage : Codable, Hashable,  Identifiable {
+    var id: Int
+
     var name: String
     var image: String
+    var viewID: Int
     var desc: String
     
     
-    init(name: String, image:String, desc: String) {
-        self.name = name
-        self.image = image
-        self.desc = desc
-    }
 }

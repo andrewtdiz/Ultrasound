@@ -10,9 +10,7 @@ import SwiftUI
 
 struct SystemView: View {
     
-    var scans: [String]
-    var name: String
-    var desc: String
+    var system: SystemObject
     
     @State var scrollState = CGFloat.zero
     @State var containerState = CGFloat.zero
@@ -26,13 +24,13 @@ struct SystemView: View {
             HStack {
                 VStack(alignment: .leading) {
                     HStack {
-                        Text("LAST UPDATED 1 MONTH AGO")
+                        Text("LAST UPDATED " + self.system.updated.uppercased())
                         .font(.footnote)
                         .foregroundColor(Color.gray)
                         Spacer()
                     }.frame(minWidth: 0, maxWidth: UIScreen.main.bounds.width*(7/8))
                     HStack {
-                        Text(desc)
+                        Text(self.system.desc)
                             .multilineTextAlignment(.leading)
                             .lineLimit(nil)
                             .font(.footnote).padding(.top, 10)
@@ -49,11 +47,11 @@ struct SystemView: View {
                     ZStack {
                         
                         HStack(spacing: 5) {
-                            ForEach(0...scans.count-1, id: \.self) { i in
+                            ForEach(0...self.system.views.count-1, id: \.self) { i in
                                 Button(action: {
                                     self.page = i
                                 }) {
-                                    Text(self.scans[i]).font(.body).foregroundColor(self.page==i ? Color.black : Color.gray).frame(width:60)
+                                    Text(self.system.views[i].shortened).font(.body).foregroundColor(self.page==i ? Color.black : Color.gray).frame(width:60)
                                 }
                             }
                         }
@@ -61,7 +59,7 @@ struct SystemView: View {
                         VStack() {
                             Spacer()
                             HStack {
-                                RoundedRectangle(cornerRadius:2).fill(Color.blue).frame(width:60, height: 2).offset(x:tabOffset(page:page, pages: scans.count))
+                                RoundedRectangle(cornerRadius:2).fill(Color.blue).frame(width:60, height: 2).offset(x:tabOffset(page:page, pages: system.views.count))
                                     .offset(x:-self.scrollState*(65/UIScreen.main.bounds.width)).shadow(radius: 1, y:1).animation(.spring())
                             }
                         }
@@ -76,10 +74,10 @@ struct SystemView: View {
                 
                 HStack(spacing:0) {
                     
-                    ForEach(scans, id: \.self) { scan in ScrollView {
+                    ForEach(system.views, id: \.self) { scan in ScrollView {
                             VStack {
                                 ForEach(1...200, id: \.self) { i in
-                                    Text(scan).font(.body).foregroundColor(Color.black).frame(width:UIScreen.main.bounds.width).multilineTextAlignment(.leading)
+                                    Text(scan.name).font(.body).foregroundColor(Color.black).frame(width:UIScreen.main.bounds.width).multilineTextAlignment(.leading)
                                 
                                 }
                             
@@ -89,7 +87,7 @@ struct SystemView: View {
                     }
                 }.frame(width:UIScreen.main.bounds.width*2)
 
-                    .offset(x:calcOffset(page:page, pages: scans.count))
+                    .offset(x:calcOffset(page:page, pages: system.views.count))
                     .offset(x:innerScrolling==true ? scrollState : CGFloat.zero)
                     
                 
@@ -110,7 +108,7 @@ struct SystemView: View {
                         .onEnded { value in
                             if((self.scrollState < -1*self.changePageDist)) {
                                 
-                                if(self.page != (self.scans.count-1)) {
+                                if(self.page != (self.system.views.count-1)) {
                                     self.page = self.page + 1
                                 }
                                 
@@ -125,7 +123,7 @@ struct SystemView: View {
                             self.innerScrolling = false
                         }
             )
-        }.offset(y:-7).navigationBarTitle(Text(name))
+        }.offset(y:-7).navigationBarTitle(Text(system.name))
             
     }
     }
@@ -156,6 +154,6 @@ func tabOffset(page: Int, pages: Int) -> CGFloat {
 
 struct SystemView_Previews: PreviewProvider {
     static var previews: some View {
-        SystemView(scans: ["Info", "View 1"], name: "Cardiac", desc: "Requires at least 2 of the following 4 views:")
+        SystemView(system: systemsData[0])
     }
 }
