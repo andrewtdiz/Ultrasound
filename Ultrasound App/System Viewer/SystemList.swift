@@ -94,7 +94,7 @@ struct SystemList: View {
                     }.navigationBarTitle(Text("Body Systems"))
                 }.frame(maxWidth:.infinity).padding(.top, 20).padding(.bottom, 50)
             }
-        }
+        }.navigationViewStyle(StackNavigationViewStyle())
     }
         
 }

@@ -498,6 +498,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Ultrasound App/Preview Content\"";
+				DEVELOPMENT_TEAM = 6TD654KWA7;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "Ultrasound App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -517,6 +518,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Ultrasound App/Preview Content\"";
+				DEVELOPMENT_TEAM = 6TD654KWA7;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "Ultrasound App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (

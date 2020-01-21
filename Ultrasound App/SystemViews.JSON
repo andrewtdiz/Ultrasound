@@ -82,7 +82,7 @@
 
 {
     "id" : 9,
-    "name": "Parasternal Long Axis",
+    "name": "Parasternal Long",
     "shortened": "PSTL",
     "systemID" : 2,
     "desc": "",
@@ -90,7 +90,7 @@
 },
 {
     "id" : 10,
-    "name": "Parasternal Short Axis",
+    "name": "Parasternal Short",
     "shortened": "PSTS",
     "systemID" : 2,
     "desc": "",
@@ -98,7 +98,7 @@
 },
 {
     "id" : 11,
-    "name": "Apical Four Chamber",
+    "name": "Apical Four",
     "shortened": "A4L",
     "systemID" : 2,
     "desc": "",
@@ -138,7 +138,7 @@
 
 {
     "id" : 15,
-    "name": "Right Upper Quadrant",
+    "name": "RUQ",
     "shortened": "RUQ",
     "systemID" : 4,
     "desc": "Must show:\n\u2022 Morrison's Pouch\n\u2022 Inferior renal pole\n\u2022 Diaphragm",
@@ -146,7 +146,7 @@
 },
 {
     "id" : 16,
-    "name": "Left Upper Quadrant",
+    "name": "LUQ",
     "shortened": "LUQ",
     "systemID" : 4,
     "desc": "Must show:\n\u2022 Splenorenal space\n\u2022 Caudal spleen tip\n\u2022 Diaphragm",
@@ -182,7 +182,7 @@
 
 {
     "id" : 20,
-    "name": "Pneumothroax Assessment Clip",
+    "name": "Pneumothroax Clip",
     "shortened": "PTXc",
     "systemID" : 5,
     "desc": "Looking for lung sliding. Recall, stills saved for pneumothorax must be m-mode",
@@ -190,7 +190,7 @@
 },
 {
     "id" : 21,
-    "name": "Pneumothroax Assessment Still",
+    "name": "Pneumothroax Still",
     "shortened": "PTXs",
     "systemID" : 5,
     "desc": "Looking for lung sliding. Stills are saved for pneumothorax must be m-mode",
@@ -198,7 +198,7 @@
 },
 {
     "id" : 22,
-    "name": "Interstitial Fluid Assessment",
+    "name": "Interstitial Fluid",
     "shortened": "IF",
     "systemID" : 5,
     "desc": "Use low frequency probe to look for B-lines. Set depth to 18cm.",
@@ -206,7 +206,7 @@
 },
 {
     "id" : 23,
-    "name": "Pleural Effusion Assessment",
+    "name": "Pleural Effusion",
     "shortened": "PEf",
     "systemID" : 5,
     "desc": "Look for continuous spine sign.",
@@ -226,7 +226,7 @@
 },
 {
     "id" : 25,
-    "name": "Fetal Heart Rate Measurement",
+    "name": "Fetal Heart Rate",
     "shortened": "FHR",
     "systemID" : 6,
     "desc": "If FHR measured, must use M-mode. Avoid pulse wave doppler",
@@ -234,7 +234,7 @@
 },
 {
     "id" : 26,
-    "name": "Intrauterine Pregnancy",
+    "name": "Pregnancy (IUP)",
     "shortened": "IUP",
     "systemID" : 6,
     "desc": "Intrauterine pregnacy is confirmed by the presence of yolk sac, fetal pole, or fetal heart rate.\nGestational sac alone is NOT enough to confirm IUP.",
@@ -254,7 +254,7 @@
 },
 {
     "id" : 28,
-    "name": "Retinal Detachment",
+    "name": "Detached Retina",
     "shortened": "RD",
     "systemID" : 7,
     "desc": "",
@@ -262,7 +262,7 @@
 },
 {
     "id" : 29,
-    "name": "Enlargened Optic Nerve Sheath Diameter",
+    "name": "Optic Nerve",
     "shortened": "ONerve",
     "systemID" : 7,
     "desc": "",
@@ -274,7 +274,7 @@
 
 {
     "id" : 30,
-    "name": "Kidney (Longitudinal and Transverse)",
+    "name": "Kidney",
     "shortened": "Kdny",
     "systemID" : 8,
     "desc": "",
@@ -282,7 +282,7 @@
 },
 {
     "id" : 31,
-    "name": "Bladder (Longitudinal and Transverse)",
+    "name": "Bladder",
     "shortened": "Blad",
     "systemID" : 8,
     "desc": "",
@@ -290,7 +290,7 @@
 },
 {
     "id" : 32,
-    "name": "Doppler (Hydronephrosis vs. Renal Vessels)",
+    "name": "Doppler",
     "shortened": "Dop",
     "systemID" : 8,
     "desc": "",
@@ -301,7 +301,7 @@
 
 {
     "id" : 33,
-    "name": "Cellulitis with Cobblestoning",
+    "name": "Cellulitis",
     "shortened": "Cell",
     "systemID" : 9,
     "desc": "",
@@ -309,7 +309,7 @@
 },
 {
     "id" : 34,
-    "name": "Doppler (hydronephrosis vs. renal vessels)",
+    "name": "Doppler",
     "shortened": "Abs",
     "systemID" : 9,
     "desc": "",

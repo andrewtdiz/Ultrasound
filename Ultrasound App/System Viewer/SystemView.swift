@@ -102,7 +102,7 @@ struct SystemView: View {
                                     }
                                    
                                 Spacer()
-                                }.padding(.horizontal).padding(.top, 15).padding(.bottom, 500).frame(width:UIScreen.main.bounds.width)
+                                }.padding(.horizontal).padding(.top, 15).padding(.bottom, 300).frame(width:UIScreen.main.bounds.width)
                         }.offset(y:-15)
                             .frame(minHeight: 0).frame(maxHeight: UIScreen.main.bounds.height*(0.7))
                         }
@@ -144,7 +144,7 @@ struct SystemView: View {
                                 self.innerScrolling = false
                             }
                 )
-            }.offset(y:-7).navigationBarTitle(Text(system.name))
+            }.offset(y:-7).navigationBarTitle(Text(system.views[page].name))
         }
             
     }

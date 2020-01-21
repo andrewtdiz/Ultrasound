@@ -26,7 +26,7 @@ struct SystemListed: View {
                 }
             }.navigationBarTitle(Text("Body Systems"))
         
-        }
+        }.navigationViewStyle(StackNavigationViewStyle())
     }
 }
 struct SystemListed_Previews: PreviewProvider {
