@@ -84,12 +84,6 @@ struct SystemView: View {
                         ForEach(system.views, id: \.self) { scan in ScrollView {
                                 VStack {
                                     HStack(){
-                                        Text(scan.name)
-                                            .font(.headline)
-                                            .fontWeight(.semibold)
-                                            Spacer()
-                                    }
-                                    HStack(){
                                         Text(scan.desc).font(.caption).fontWeight(.regular).foregroundColor(Color.black.opacity(0.7))
                                             Spacer()
                                     }
