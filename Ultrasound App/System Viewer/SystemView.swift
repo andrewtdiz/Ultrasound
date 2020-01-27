@@ -22,8 +22,7 @@ struct SystemView: View {
     var changePageDist = UIScreen.main.bounds.width/4
     var body: some View {
         
-        ScrollView {
-            VStack {
+            ScrollView {
                 VStack() {
                     HStack {
                         VStack(alignment: .leading) {
@@ -39,110 +38,46 @@ struct SystemView: View {
                                 Text(self.system.desc)
                                     .multilineTextAlignment(.leading)
                                     .lineLimit(nil)
-                                    .font(.footnote).padding(.top, 5)
+                                    .font(.footnote).padding(.top, 5).fixedSize(horizontal: false, vertical: true)
                                 Spacer()
                             }.frame(minWidth: 0, maxWidth: UIScreen.main.bounds.width*(7/8)).padding(.top, -10)
 
                         }
                         Spacer()
-                    }.padding(.leading, 20).offset(x:UIScreen.main.bounds.width/2)
-
-                    ScrollView(.horizontal, showsIndicators: false) {
-                        VStack() {
-                        
-                            ZStack {
-                                
-                                HStack(spacing: CGFloat(offst)) {
-                                    ForEach(0...self.system.views.count-1, id: \.self) { i in
-                                        Button(action: {
-                                            self.page = i
-                                        }) {
-                                            Text(self.system.views[i].shortened).font(.body).foregroundColor(self.page==i ? Color.black : Color.gray).frame(width: CGFloat(self.tabWidth))
-                                        }
-                                    }
-                                }
-                            
-                                VStack() {
-                                    Spacer()
-                                    HStack {
-                                        RoundedRectangle(cornerRadius:2).fill(Color.blue).frame(width: CGFloat(tabWidth), height: 2).offset(x:tabOffset(page:page, pages: system.views.count, tabWidth: tabWidth, offst: offst))
-                                            .offset(x:-self.scrollState*(CGFloat(self.tabWidth+self.offst)/UIScreen.main.bounds.width)).shadow(radius: 1, y:1).animation(.spring())
-                                    }
-                                }
-                                
-                            }.frame(maxHeight: 35)
-                            
-                        }.zIndex(10)
-                    }.padding(.horizontal).offset(x:UIScreen.main.bounds.width/2).animation(.none)
+                    }.padding(.leading, 20)
                     
-                    Divider().padding(.vertical, -8.0)
+
+                    
+                    Divider().padding(.vertical, 0)
                 }
                 ZStack() {
                     
-                    HStack(spacing:0) {
+                    VStack(spacing:10) {
                         
-                        ForEach(system.views, id: \.self) { scan in ScrollView {
-                                VStack {
-                                    HStack(){
-                                        Text(scan.desc).font(.caption).fontWeight(.regular).foregroundColor(Color.black.opacity(0.7))
-                                            Spacer()
-                                    }
-                                   
-                                    if (!scan.images.isEmpty) {
-                                        VStack() { Image(scan.images[0].image).resizable().scaledToFit().cornerRadius(3).frame(width: UIScreen.main.bounds.width*4/5)
-                                            Text(scan.images[0].desc).font(.caption).fontWeight(.regular).foregroundColor(Color.black.opacity(0.7))
-                                            
-                                        }.frame(width: UIScreen.main.bounds.width*4/5).padding(.vertical)
-                                    }
-                                   
-                                Spacer()
-                                }.padding(.horizontal).padding(.top, 15).padding(.bottom, 300).frame(width:UIScreen.main.bounds.width)
-                        }.offset(y:-15)
-                            .frame(minHeight: 0).frame(maxHeight: UIScreen.main.bounds.height*(0.7))
+                        ForEach(system.views, id: \.self) { scan in
+                            link(label: scan.name, destination: ScanView(scan:scan))
                         }
-                    }.frame(width:UIScreen.main.bounds.width*2)
-
-                        .offset(x:calcOffset(page:page, pages: system.views.count))
-                        .offset(x:innerScrolling==true ? scrollState : CGFloat.zero)
+                    }.padding()
                         
                     
-                }.background(Color.white)
-                    .animation(.spring())
-                        .gesture(
-                            DragGesture()
-                            .onChanged { value in
-                                if(Int(value.startLocation.x) > 215) {
-                                    self.startLoc = value.startLocation
-                                    self.innerScrolling = true
-                                    self.scrollState = value.translation.width
-                                }
-                               
-                                
-                               
-                            }
-                            .onEnded { value in
-                                if((self.scrollState < -1*self.changePageDist)) {
-                                    
-                                    if(self.page != (self.system.views.count-1)) {
-                                        self.page = self.page + 1
-                                    }
-                                    
-                                } else if(self.scrollState > self.changePageDist) {
-                                    
-                                    if(self.page != 0) {
-                                        self.page = self.page - 1
-                                    }
-                                }
-                                
-                                self.scrollState = 0
-                                self.innerScrolling = false
-                            }
-                )
-            }.offset(y:-7).navigationBarTitle(Text(system.views[page].name))
-        }
+                }.frame(maxWidth: UIScreen.main.bounds.width).background(Color.white)
+                    
+            }.offset(y:-7).navigationBarTitle(Text(system.name))
+
             
+        
     }
+    
+}
+
+func link<Destination: View>(label: String, destination: Destination) -> some View {
+    return NavigationLink(destination: destination) {
+        HStack {
+            Text(label).font(.headline).fontWeight(.semibold)
+            Spacer()
+        }
     }
+}
 
 
 func calcOffset(page: Int, pages: Int) -> CGFloat {

@@ -77,5 +77,21 @@
     "viewID": 33,
     "desc": "",
     "offset" : 0,
-}
+},
+{
+    "id" : 10,
+    "name": "A Clip",
+    "image": "00Kidney",
+    "viewID": 0,
+    "desc": "Transverse video clip sweeping through the aorta (from SMA to iliacs).\nInclude measurement of largest diameter",
+    "offset" : 0,
+},
+{
+    "id" : 11,
+    "name": "A Clip",
+    "image": "00Cellulitis",
+    "viewID": 0,
+    "desc": "Transverse video clip sweeping through the aorta (from SMA to iliacs).\nInclude measurement of largest diameter",
+    "offset" : 0,
+},
 ]

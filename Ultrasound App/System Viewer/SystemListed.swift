@@ -24,7 +24,7 @@ struct SystemListed: View {
                             .padding(.leading)
                     }.frame(maxHeight: 40)
                 }
-            }.navigationBarTitle(Text("Body Systems"))
+            }.navigationBarTitle(Text("Applications"))
         
         }.navigationViewStyle(StackNavigationViewStyle())
     }

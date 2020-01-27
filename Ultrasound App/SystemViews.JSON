@@ -1,9 +1,9 @@
 [{
     "id" : 0,
-    "name": "A Clip",
+    "name": "Aorta Clip",
     "shortened": "ACLIP",
     "systemID" : 0,
-    "desc": "",
+    "desc": "Transverse: video clip sweeping through aorta",
     "images": [],
 },
 {

@@ -19,6 +19,9 @@
 		10A710C223D51791004C83B2 /* SystemImages.JSON in Resources */ = {isa = PBXBuildFile; fileRef = 10A710C123D51791004C83B2 /* SystemImages.JSON */; };
 		10A710C423D553D2004C83B2 /* SystemListed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A710C323D553D2004C83B2 /* SystemListed.swift */; };
 		10A710C623D5BC66004C83B2 /* SystemList2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A710C523D5BC66004C83B2 /* SystemList2.swift */; };
+		10A710D223D77AFD004C83B2 /* ScanImageViewer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A710D123D77AFD004C83B2 /* ScanImageViewer.swift */; };
+		10A710D423DF5CA0004C83B2 /* ScanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A710D323DF5CA0004C83B2 /* ScanView.swift */; };
+		10A710D623DF6770004C83B2 /* TileList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A710D523DF6770004C83B2 /* TileList.swift */; };
 		10C1200323D43A1A003C483A /* SystemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C1200223D43A1A003C483A /* SystemView.swift */; };
 		10DE427323D428EA00847E5F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10DE427223D428EA00847E5F /* AppDelegate.swift */; };
 		10DE427523D428EA00847E5F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10DE427423D428EA00847E5F /* SceneDelegate.swift */; };
@@ -61,6 +64,9 @@
 		10A710C123D51791004C83B2 /* SystemImages.JSON */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = SystemImages.JSON; sourceTree = "<group>"; };
 		10A710C323D553D2004C83B2 /* SystemListed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemListed.swift; sourceTree = "<group>"; };
 		10A710C523D5BC66004C83B2 /* SystemList2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemList2.swift; sourceTree = "<group>"; };
+		10A710D123D77AFD004C83B2 /* ScanImageViewer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanImageViewer.swift; sourceTree = "<group>"; };
+		10A710D323DF5CA0004C83B2 /* ScanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanView.swift; sourceTree = "<group>"; };
+		10A710D523DF6770004C83B2 /* TileList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TileList.swift; sourceTree = "<group>"; };
 		10C1200223D43A1A003C483A /* SystemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemView.swift; sourceTree = "<group>"; };
 		10DE426F23D428EA00847E5F /* Ultrasound App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ultrasound App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		10DE427223D428EA00847E5F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -111,6 +117,9 @@
 				109119E623D4C94800AA7AE9 /* SystemList.swift */,
 				10A710C323D553D2004C83B2 /* SystemListed.swift */,
 				10A710C523D5BC66004C83B2 /* SystemList2.swift */,
+				10A710D123D77AFD004C83B2 /* ScanImageViewer.swift */,
+				10A710D323DF5CA0004C83B2 /* ScanView.swift */,
+				10A710D523DF6770004C83B2 /* TileList.swift */,
 			);
 			path = "System Viewer";
 			sourceTree = "<group>";
@@ -319,7 +328,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				10A710D223D77AFD004C83B2 /* ScanImageViewer.swift in Sources */,
 				10DE427323D428EA00847E5F /* AppDelegate.swift in Sources */,
+				10A710D423DF5CA0004C83B2 /* ScanView.swift in Sources */,
+				10A710D623DF6770004C83B2 /* TileList.swift in Sources */,
 				10A710BC23D512C1004C83B2 /* InfoScreen.swift in Sources */,
 				109119EB23D4F93600AA7AE9 /* SystemObject.swift in Sources */,
 				109119E523D43AF100AA7AE9 /* TestView.swift in Sources */,
