@@ -31,6 +31,7 @@
 		10DE427F23D428EB00847E5F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10DE427D23D428EB00847E5F /* LaunchScreen.storyboard */; };
 		10DE428A23D428EC00847E5F /* Ultrasound_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10DE428923D428EC00847E5F /* Ultrasound_AppTests.swift */; };
 		10DE429523D428EC00847E5F /* Ultrasound_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10DE429423D428EC00847E5F /* Ultrasound_AppUITests.swift */; };
+		7145684323DF6ED200CEA90F /* GIFView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7145684223DF6ED200CEA90F /* GIFView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +83,7 @@
 		10DE429023D428EC00847E5F /* Ultrasound AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Ultrasound AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		10DE429423D428EC00847E5F /* Ultrasound_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ultrasound_AppUITests.swift; sourceTree = "<group>"; };
 		10DE429623D428EC00847E5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7145684223DF6ED200CEA90F /* GIFView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GIFView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +153,7 @@
 				10DE427223D428EA00847E5F /* AppDelegate.swift */,
 				10DE427423D428EA00847E5F /* SceneDelegate.swift */,
 				10DE427623D428EA00847E5F /* ContentView.swift */,
+				7145684223DF6ED200CEA90F /* GIFView.swift */,
 				10C1200123D439F7003C483A /* System Viewer */,
 				10DE427823D428EB00847E5F /* Assets.xcassets */,
 				10DE427D23D428EB00847E5F /* LaunchScreen.storyboard */,
@@ -342,6 +345,7 @@
 				10DE427723D428EA00847E5F /* ContentView.swift in Sources */,
 				109119E723D4C94800AA7AE9 /* SystemList.swift in Sources */,
 				10A710C623D5BC66004C83B2 /* SystemList2.swift in Sources */,
+				7145684323DF6ED200CEA90F /* GIFView.swift in Sources */,
 				10C1200323D43A1A003C483A /* SystemView.swift in Sources */,
 				10A710C423D553D2004C83B2 /* SystemListed.swift in Sources */,
 			);
