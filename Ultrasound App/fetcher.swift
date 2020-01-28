@@ -54,8 +54,21 @@ func combineSysAndViews(viewsData:[SystemViewObject] , systemsData:[SystemObject
             }
         }
     }
-    
+    systemsCopy = systemsCopy.sorted(by: {$0.name < $1.name})
     return systemsCopy
     
 }
 
+
+
+
+
+//{
+//    "id": 1,
+//    "name": "Biliary",
+//    "image": "",
+//    "desc": "Are there gallstones? Signs of biliary inflammation?\nGallbladder can be a sweep-through or two still images.\nMeasure anterior wall.",
+//    "views": [],
+//    "updated": "one week ago",
+//    "icon" : "biliaryIcon",
+//},

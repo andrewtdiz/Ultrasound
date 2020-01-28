@@ -22,7 +22,7 @@ struct SystemView: View {
     var changePageDist = UIScreen.main.bounds.width/4
     var body: some View {
         
-            ScrollView {
+            ScrollView() {
                 VStack() {
                     HStack {
                         VStack(alignment: .leading) {
@@ -48,21 +48,27 @@ struct SystemView: View {
                     
 
                     
-                    Divider().padding(.vertical, 0)
+                    ExDivider().padding(.vertical, 0)
                 }
-                ZStack() {
+                VStack() {
+                    if(system.name=="Aorta") {
+                        AortaView(system: system)
+                    } else if (system.name=="Renal"){
+                        RenalView(system: system)
+                    } else if (system.name=="Soft tissue/MSK"){
+                        SoftMSKVue(system: system)
+                    } else {
+                        VStack() {
+                            ForEach(system.views, id: \.self) { view in
+                                link(label: view.name, destination: ScanView(scan: view), first: false, view: view)
+                            }
+                        }.padding(.vertical, 20).frame(minHeight: 0, maxHeight: .infinity)
+                    }
+
+                    Spacer()
+                }.padding(.bottom, UIScreen.main.bounds.height/2).background(Color.gray.opacity(0.12)).offset(y: system.name=="Aorta" ? -7: 0).offset(y: system.name=="Renal" ? -7: 0).offset(y: system.name=="Soft tissue/MSK" ? -7: 0)
                     
-                    VStack(spacing:10) {
-                        
-                        ForEach(system.views, id: \.self) { scan in
-                            link(label: scan.name, destination: ScanView(scan:scan))
-                        }
-                    }.padding()
-                        
-                    
-                }.frame(maxWidth: UIScreen.main.bounds.width).background(Color.white)
-                    
-            }.offset(y:-7).navigationBarTitle(Text(system.name))
+            }.frame(maxHeight: .infinity).navigationBarTitle(Text(system.name))
 
             
         
@@ -70,14 +76,36 @@ struct SystemView: View {
     
 }
 
-func link<Destination: View>(label: String, destination: Destination) -> some View {
+func link<Destination: View>(label: String, destination: Destination, first: Bool, view: SystemViewObject) -> some View {
+
     return NavigationLink(destination: destination) {
-        HStack {
-            Text(label).font(.headline).fontWeight(.semibold)
-            Spacer()
-        }
+        VStack() {
+//            if(first) {
+//                Divider()
+//            }
+            Spacer().frame(height:15)
+            HStack(spacing: 15) {
+                if(view.shortened=="Loop") {
+                    Image(systemName: "video.fill").resizable()
+                        .scaledToFit().foregroundColor(Color.black.opacity(0.8))
+                        .frame(width: 20, height: 20)
+                } else {
+                    Image(systemName: "camera.fill").resizable()
+                    .scaledToFit().foregroundColor(Color.black.opacity(0.8))
+                    .frame(width: 20, height: 20)
+                }
+            Text(label).font(.headline).foregroundColor(Color.black).fontWeight(.regular)
+                Spacer()
+                Image(systemName: "chevron.right").resizable().scaledToFit().frame(height:12).padding(.trailing).foregroundColor(Color.gray)
+            }
+            Spacer().frame(height:15)
+            if(!first) {
+                Divider().frame(height:2)
+            }
+        }.padding(.horizontal).background(Color.white)
     }
 }
+
 
 
 func calcOffset(page: Int, pages: Int) -> CGFloat {
@@ -94,6 +122,23 @@ func calcOffset(page: Int, pages: Int) -> CGFloat {
     
 }
 
+struct ExDivider: View {
+    let color: Color = .gray
+    let width: CGFloat = 2
+    var body: some View {
+        VStack(spacing: 0) {
+            Rectangle()
+                .fill(color.opacity(0.3))
+                .frame(height: 1)
+                .edgesIgnoringSafeArea(.horizontal)
+            Rectangle()
+            .fill(color.opacity(0.1))
+            .frame(height: 1)
+            .edgesIgnoringSafeArea(.horizontal)
+        }
+    }
+}
+
 func tabOffset(page: Int, pages: Int, tabWidth: Int, offst: Int) -> CGFloat {
     if(pages%2==0) {
         let first = -1*CGFloat(tabWidth/2 + offst)
@@ -107,6 +152,6 @@ func tabOffset(page: Int, pages: Int, tabWidth: Int, offst: Int) -> CGFloat {
 
 struct SystemView_Previews: PreviewProvider {
     static var previews: some View {
-        SystemView(system: systemsData[0])
+        SystemView(system: systemsData[1])
     }
 }
