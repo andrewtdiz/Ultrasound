@@ -14,8 +14,6 @@ struct InfoScreen: View {
             Text("Welcome to Andrew's Ultrasound app")
             Spacer()
             GIFView(gifName: "cardiac")
-        }.onAppear {
-            print(systemsData)
         }
     }
 }

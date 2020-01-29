@@ -9,13 +9,12 @@
 import Foundation
 
 struct SystemImage : Codable, Hashable,  Identifiable {
+    var name: String
     var id: Int
 
-    var name: String
     var image: String
     var viewID: Int
-    var desc: String
-    var offset: Int
-    
+    var type: String
+    var display: Bool
     
 }

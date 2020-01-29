@@ -9,13 +9,13 @@
 import Foundation
 
 struct SystemViewObject : Codable, Hashable, Identifiable {
+    
     var id: Int
-
     var name: String
-    var shortened: String
+    
+    var type: String
     var systemID: Int
     var desc: String
     var images: [SystemImage]
-    
     
 }

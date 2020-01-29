@@ -27,12 +27,12 @@ struct SystemView: View {
                     HStack {
                         VStack(alignment: .leading) {
                             HStack {
-                                Text("LAST UPDATED " + self.system.updated.uppercased())
+                                Text("QUESTIONS")
                                 .font(.footnote)
                                 .foregroundColor(Color.gray)
                                 Spacer()
                                 Image(system.icon).resizable()
-                                .scaledToFit().frame(width:30, height:30).offset(y:-35)
+                                .scaledToFit().frame(width:50, height:50).offset(y:-55)
                             }.frame(minWidth: 0, maxWidth: UIScreen.main.bounds.width*(7/8))
                             HStack {
                                 Text(self.system.desc)
@@ -85,7 +85,7 @@ func link<Destination: View>(label: String, destination: Destination, first: Boo
 //            }
             Spacer().frame(height:15)
             HStack(spacing: 15) {
-                if(view.shortened=="Loop") {
+                if(view.type=="Loop") {
                     Image(systemName: "video.fill").resizable()
                         .scaledToFit().foregroundColor(Color.black.opacity(0.8))
                         .frame(width: 20, height: 20)
@@ -152,6 +152,6 @@ func tabOffset(page: Int, pages: Int, tabWidth: Int, offst: Int) -> CGFloat {
 
 struct SystemView_Previews: PreviewProvider {
     static var previews: some View {
-        SystemView(system: systemsData[1])
+        SystemView(system: systemsData[0])
     }
 }

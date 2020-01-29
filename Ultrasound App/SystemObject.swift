@@ -8,13 +8,13 @@
 import Foundation
 
 struct SystemObject : Codable, Hashable, Identifiable {
+    var name: String
+    
     var id: Int
     
-    var name: String
-    var image: String
     var desc: String
     var views: [SystemViewObject]
-    var updated: String
+    
     var icon: String
     
 }

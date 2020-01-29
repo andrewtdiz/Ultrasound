@@ -13,13 +13,17 @@ struct ScanImageViewer: View {
     var offst = UIScreen.main.bounds.width/16
     var tabWidth = CGFloat(75)
     var images: [SystemImage]
-    var labels = ["Unlabeled", "Labeled", "Video"]
+    var labels = ["Unlabeled", "Labeled", "Clip"]
     var body: some View {
         VStack {
             HStack {
                 ZStack {
                     
                     HStack(spacing: CGFloat(self.offst)) {
+                        if(images.count==1) {
+                            Text(self.labels[2]).font(.footnote)
+                            .foregroundColor(Color.black).frame(width: CGFloat(self.tabWidth)).padding(.bottom, 5)
+                        } else {
                         ForEach(0..<images.count, id: \.self) { i in
                             Button(action: {
                                 self.page = i
@@ -27,6 +31,7 @@ struct ScanImageViewer: View {
                                 Text(self.labels[i]).font(.footnote)
                                     .foregroundColor(self.page==i ? Color.black : Color.gray).frame(width: CGFloat(self.tabWidth)).padding(.bottom, 5)
                             }
+                        }
                         }
                     }
                 
@@ -40,23 +45,30 @@ struct ScanImageViewer: View {
                 }.padding(.leading).frame(maxHeight: 35)
                 Spacer()
             }
-            HStack {
-                ForEach(0..<images.count, id: \.self) { i in
-                    VStack()
-                        {
-                            Image(self.images[i].image).resizable().scaledToFit().cornerRadius(3).frame(width: UIScreen.main.bounds.width*4/5).frame(height:UIScreen.main.bounds.height/4)
-                            HStack {
-                                Text(self.images[i].desc)
-                                    .multilineTextAlignment(.leading)
-                                    .lineLimit(nil)
-                                    .font(.footnote).padding(.top, 5)
-                                Spacer()
-                            }.frame(minWidth: 0, maxWidth: UIScreen.main.bounds.width*(7/8))
+            if(images.count==3) {
+            HStack(spacing:0) {
+                
+                    ForEach(0..<images.count, id: \.self) { i in
+                        VStack() {
+                                if (i<2) {
+                                    Image(self.images[i].image).resizable().scaledToFit().cornerRadius(3).frame(height:UIScreen.main.bounds.height/4).frame(width: UIScreen.main.bounds.width)
+                                } else {
+                                    GIFView(gifName: self.images[i].image)
+                                }
                         
-                    }.padding(.vertical).frame(width: UIScreen.main.bounds.width)
-                        .offset(x:imgOffset(page: self.page, pages: self.images.count)).animation(.spring())
-                }
+                            
+                        }.frame(width: UIScreen.main.bounds.width)
+                            .offset(x:imgOffset(page: self.page, pages: self.images.count)).animation(.spring())
+                    }
+                
+                
+                
                 }.frame(width: UIScreen.main.bounds.width).clipped()
+                } else {
+                    VStack() {
+                        GIFView(gifName: self.images[0].image).frame(height:UIScreen.main.bounds.height/4).frame(width: UIScreen.main.bounds.width)
+                    }.frame(width: UIScreen.main.bounds.width).clipped()
+                }
         }
     }
 }
