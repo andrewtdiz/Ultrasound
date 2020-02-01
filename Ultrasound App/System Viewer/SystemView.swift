@@ -32,7 +32,7 @@ struct SystemView: View {
                                 .foregroundColor(Color.gray)
                                 Spacer()
                                 Image(system.icon).resizable()
-                                .scaledToFit().frame(width:50, height:50).offset(y:-55)
+                                .scaledToFit().frame(width:50, height:50).offset(y:-35)
                             }.frame(minWidth: 0, maxWidth: UIScreen.main.bounds.width*(7/8))
                             HStack {
                                 Text(self.system.desc)
@@ -40,7 +40,7 @@ struct SystemView: View {
                                     .lineLimit(nil)
                                     .font(.footnote).padding(.top, 5).fixedSize(horizontal: false, vertical: true)
                                 Spacer()
-                            }.frame(minWidth: 0, maxWidth: UIScreen.main.bounds.width*(7/8)).padding(.top, -10)
+                            }.frame(minWidth: 0, maxWidth: UIScreen.main.bounds.width*(7/8)).padding(.top, -10).offset(y:-10)
 
                         }
                         Spacer()
@@ -49,7 +49,7 @@ struct SystemView: View {
 
                     
                     ExDivider().padding(.vertical, 0)
-                }
+                }.background(Color.white).offset(y:-20)
                 VStack() {
                     if(system.name=="Aorta") {
                         AortaView(system: system)
@@ -66,9 +66,9 @@ struct SystemView: View {
                     }
 
                     Spacer()
-                }.padding(.bottom, UIScreen.main.bounds.height/2).background(Color.gray.opacity(0.12)).offset(y: system.name=="Aorta" ? -7: 0).offset(y: system.name=="Renal" ? -7: 0).offset(y: system.name=="Soft tissue/MSK" ? -7: 0)
+                }.padding(.bottom, UIScreen.main.bounds.height/2).offset(y: system.name=="Aorta" ? -7: 0).offset(y: system.name=="Renal" ? -7: 0).offset(y: system.name=="Soft tissue/MSK" ? -7: 0).offset(y:-15)
                     
-            }.frame(maxHeight: .infinity).navigationBarTitle(Text(system.name))
+            }.background(Color.gray.opacity(0.12)).frame(maxHeight: .infinity).navigationBarTitle(Text(system.name))
 
             
         

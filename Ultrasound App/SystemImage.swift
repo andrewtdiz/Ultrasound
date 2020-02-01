@@ -14,7 +14,7 @@ struct SystemImage : Codable, Hashable,  Identifiable {
 
     var image: String
     var viewID: Int
+    var desc: String
     var type: String
-    var display: Bool
     
 }
