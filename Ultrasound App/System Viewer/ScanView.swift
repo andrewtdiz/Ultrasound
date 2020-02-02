@@ -42,7 +42,11 @@ struct ScanView: View {
             if(!scan.images.isEmpty) {
                 ScanImageViewer(images: scan.images).padding(.top)
             }
-                
+            HStack() {
+                Text(scan.desc).font(.body).padding(.horizontal)
+                Spacer()
+            }
+            
         }.offset(y:-2).navigationBarTitle(Text(scan.name))
     }
 }

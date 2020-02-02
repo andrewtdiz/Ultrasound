@@ -21,7 +21,7 @@
         "icon": "dvtIcon",
     },
     {
-        "name": "eFAST",
+        "name": "EFAST",
         "id": 3,
         "desc": "Is there free fluid in the abdomen?\nIs there fluid/blood in the pericardium?\nIs there blood in the thorax?\nIs there pneumothorax?",
         "views": [],

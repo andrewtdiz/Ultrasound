@@ -130,7 +130,7 @@
         "id": 14,
         "type": "Loop",
         "systemID": 3,
-        "desc": "Must show:\\n\\u2022 Morrison's Pouch\\n\\u2022 Inferior renal pole\\n\\u2022 Diaphragm",
+        "desc": "Must show:\n\u2022 Morrison's Pouch\n\u2022 Inferior renal pole\n\u2022 Diaphragm",
         "images": [],
         "system": "eFAST"
     },
@@ -139,7 +139,7 @@
         "id": 15,
         "type": "Loop",
         "systemID": 3,
-        "desc": "Must show:\\n\\u2022 Inferior renal pole\\n\\u2022 Diaphragm",
+        "desc": "Must show:\n\u2022 Inferior renal pole\n\u2022 Diaphragm",
         "images": [],
         "system": "eFAST"
     },
@@ -292,7 +292,7 @@
         "id": 32,
         "type": "Frame",
         "systemID": 6,
-        "desc": "Measure width of IVC with inspiration.\\nDoes it change by >50%?",
+        "desc": "Measure width of IVC with inspiration.\nDoes it change by >50%?",
         "images": [],
         "system": "IVC"
     },
