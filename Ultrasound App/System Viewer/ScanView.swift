@@ -23,13 +23,7 @@ struct ScanView: View {
                             Spacer()
                             
                         }.frame(minWidth: 0, maxWidth: UIScreen.main.bounds.width*(7/8))
-                        HStack {
-                            Text(self.scan.desc)
-                                .multilineTextAlignment(.leading)
-                                .lineLimit(nil)
-                                .font(.footnote).padding(.top, 5).fixedSize(horizontal: false, vertical: true)
-                            Spacer()
-                        }.frame(minWidth: 0, maxWidth: UIScreen.main.bounds.width*(7/8)).padding(.top, 7)
+                        Spacer().frame(height: 20)
 
                     }
                     Spacer()

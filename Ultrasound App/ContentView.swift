@@ -20,15 +20,6 @@ struct ContentView: View {
                         Image(systemName: "house.fill")
                     }
                 }
-                .tag(0)
-            SystemList()
-                .font(.title)
-                .tabItem {
-                    VStack {
-                        Image(systemName: "list.dash")
-                    }
-                }
-                .tag(1)
             InfoScreen()
             .font(.title)
             .tabItem {
@@ -36,7 +27,7 @@ struct ContentView: View {
                     Image(systemName: "questionmark.circle.fill")
                 }
             }
-            .tag(2)
+            .tag(1)
         }
     }
 }

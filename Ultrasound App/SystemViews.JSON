@@ -1,46 +1,47 @@
+
 [
     {
         "name": "Transverse",
         "id": 0,
         "type": "Loop",
         "systemID": 0,
-        "desc": "Transverse: video Loop sweeping through aorta",
+        "desc": "Transverse loop sweeping through aorta",
         "images": [],
-        "system": "Aorta",
+        "system": "Aorta"
     },
     {
         "name": "Proximal Aorta",
         "id": 1,
         "type": "Frame",
         "systemID": 0,
-        "desc": "One of four transverse still views (Proximal, Mid, Distal, and Bifurcation).",
+        "desc": "One of four transverse still views (Proximal, Mid, Distal, and Bifurcation).\nMust show liver, celiac vessels, and spine",
         "images": [],
-        "system": "Aorta",
+        "system": "Aorta"
     },
     {
         "name": "Mid Aorta",
         "id": 2,
         "type": "Frame",
         "systemID": 0,
-        "desc": "One of four transverse still views (Proximal, Mid, Distal, and Bifurcation).",
+        "desc": "One of four transverse still views (Proximal, Mid, Distal, and Bifurcation).\nMust show liver, SMA, and spine",
         "images": [],
-        "system": "Aorta",
+        "system": "Aorta"
     },
     {
         "name": "Distal Aorta",
         "id": 3,
         "type": "Frame",
         "systemID": 0,
-        "desc": "One of four transverse still views (Proximal, Mid, Distal, and Bifurcation).",
+        "desc": "One of four transverse still views (Proximal, Mid, Distal, and Bifurcation).\nMust show spine",
         "images": [],
-        "system": "Aorta",
+        "system": "Aorta"
     },
     {
         "name": "Aortic Bifurcation",
         "id": 4,
         "type": "Frame",
         "systemID": 0,
-        "desc": "One of four transverse still views (Proximal, Mid, Distal, and Bifurcation).",
+        "desc": "One of four transverse still views (Proximal, Mid, Distal, and Bifurcation).\nMust show spine",
         "images": [],
         "system": "Aorta"
     },
@@ -49,7 +50,7 @@
         "id": 5,
         "type": "Loop",
         "systemID": 0,
-        "desc": "Sagittal clip of the Aorta",
+        "desc": "Sagittal loop of the Aorta.",
         "images": [],
         "system": "Aorta"
     },
@@ -58,7 +59,7 @@
         "id": 6,
         "type": "Frame",
         "systemID": 0,
-        "desc": "Sagittal frame of the Sagittal Aorta with measurement",
+        "desc": "Sagittal frame of the Aorta.\nMeasure outer-to-outer 2cm distal to the SMA.\nNromal aorta < 3mm.\nNormal iliac arteries < 1.5mm",
         "images": [],
         "system": "Aorta"
     },
@@ -67,7 +68,7 @@
         "id": 7,
         "type": "Loop",
         "systemID": 1,
-        "desc": "One of four primary cardiac views",
+        "desc": "Must show descending thoracic aorta",
         "images": [],
         "system": "Cardiac"
     },
@@ -76,7 +77,7 @@
         "id": 8,
         "type": "Loop",
         "systemID": 1,
-        "desc": "One of four primary cardiac views",
+        "desc": "Must show papillary muscles, mitral valve, and aortic valve",
         "images": [],
         "system": "Cardiac"
     },
@@ -85,7 +86,7 @@
         "id": 9,
         "type": "Loop",
         "systemID": 1,
-        "desc": "One of four primary cardiac views",
+        "desc": "The interventricular septum must be vertically aligned in the view",
         "images": [],
         "system": "Cardiac"
     },
@@ -94,7 +95,7 @@
         "id": 10,
         "type": "Loop",
         "systemID": 1,
-        "desc": "One of four primary cardiac views",
+        "desc": "Assess for pericardial effusion",
         "images": [],
         "system": "Cardiac"
     },
@@ -112,7 +113,7 @@
         "id": 12,
         "type": "Loop",
         "systemID": 2,
-        "desc": "Must include the popliteal vein throught the bifurcation",
+        "desc": "Must include the popliteal vein throught the bifurcation with trifurcation",
         "images": [],
         "system": "DVT"
     },
@@ -121,7 +122,7 @@
         "id": 13,
         "type": "Loop",
         "systemID": 2,
-        "desc": "Image of the Common Femoral Vein",
+        "desc": "Image of the Common Femoral Vein\nCompressed every 1-2cm to the knee",
         "images": [],
         "system": "DVT"
     },
@@ -130,7 +131,7 @@
         "id": 14,
         "type": "Loop",
         "systemID": 3,
-        "desc": "Must show:\n\u2022 Morrison's Pouch\n\u2022 Inferior renal pole\n\u2022 Diaphragm",
+        "desc": "Central venous pressure and diaphragm",
         "images": [],
         "system": "eFAST"
     },
@@ -139,7 +140,7 @@
         "id": 15,
         "type": "Loop",
         "systemID": 3,
-        "desc": "Must show:\n\u2022 Inferior renal pole\n\u2022 Diaphragm",
+        "desc": "Slide the following structures Lung - Diaphragm - Spleen - Caudal tip of the Spleen - Inferior renal pole",
         "images": [],
         "system": "eFAST"
     },
@@ -148,7 +149,7 @@
         "id": 16,
         "type": "Loop",
         "systemID": 3,
-        "desc": "Sagittal bladder view.",
+        "desc": "Fan across a sagittal view of the bladder",
         "images": [],
         "system": "eFAST"
     },
@@ -157,7 +158,7 @@
         "id": 17,
         "type": "Loop",
         "systemID": 3,
-        "desc": "Transverse view of the gallbladder",
+        "desc": "Fan across a transverse view of the bladder",
         "images": [],
         "system": "eFAST"
     },
@@ -166,7 +167,7 @@
         "id": 18,
         "type": "Loop",
         "systemID": 3,
-        "desc": "One of four potential cardiac views",
+        "desc": "Fan across a subxiphoid view of the Heart",
         "images": [],
         "system": "eFAST"
     },
@@ -175,7 +176,7 @@
         "id": 19,
         "type": "Loop",
         "systemID": 3,
-        "desc": "Assess for pneumothorax",
+        "desc": "Slide across 3 rib spaces",
         "images": [],
         "system": "eFAST"
     },
@@ -184,7 +185,7 @@
         "id": 20,
         "type": "Loop",
         "systemID": 3,
-        "desc": "Assess for pneumothorax",
+        "desc": "Slide across 2 rib spaces",
         "images": [],
         "system": "eFAST"
     },
@@ -202,7 +203,7 @@
         "id": 22,
         "type": "Loop",
         "systemID": 4,
-        "desc": "Sagittal sweep of the gallbladder",
+        "desc": "Fan through the gallbladder from a sagittal perspective",
         "images": [],
         "system": "Gallbladder"
     },
@@ -211,7 +212,7 @@
         "id": 23,
         "type": "Loop",
         "systemID": 4,
-        "desc": "Transverse sweep of the gallbladder",
+        "desc": "Fan through the gallbladder from a transverse perspective",
         "images": [],
         "system": "Gallbladder"
     },
@@ -220,7 +221,7 @@
         "id": 24,
         "type": "Frame",
         "systemID": 4,
-        "desc": "Must have measurement of anterior wall",
+        "desc": "Measure the anterior wall of the gallbladder.\nOptimize with zoom.\nNormal < 3mm",
         "images": [],
         "system": "Gallbladder"
     },
@@ -229,7 +230,7 @@
         "id": 25,
         "type": "Frame",
         "systemID": 4,
-        "desc": "Assess common bile duct for obstruction or masses",
+        "desc": "Measure the CBD internal diamater in the Porta Hepatis or in the sagittal gallbladder exclamatino point or the Mickey Mouse sign.\nOptimize with color and zoom.\nNormal <6mm (include age adjustments)",
         "images": [],
         "system": "Gallbladder"
     },
@@ -301,7 +302,7 @@
         "id": 33,
         "type": "Loop",
         "systemID": 7,
-        "desc": "Sagittal view of the uterus",
+        "desc": "Sagittal view of the uterus.\nConfirm IUP (yolk sac present?).\nGestational sac/Double Decidual sign is insufficient to confirm IUP. ",
         "images": [],
         "system": "OBGYN 1st"
     },
@@ -310,7 +311,7 @@
         "id": 34,
         "type": "Loop",
         "systemID": 7,
-        "desc": "Transverse view of the uterus",
+        "desc": "Transverse view of the uterus.\nConfirm IUP (yolk sac present?).\nGestational sac/Double Decidual sign is insufficient to confirm IUP. ",
         "images": [],
         "system": "OBGYN 1st"
     },
@@ -328,7 +329,7 @@
         "id": 36,
         "type": "Frame",
         "systemID": 7,
-        "desc": "Assessment of EMM",
+        "desc": "Measurement of EMM (IUP > 8mm)",
         "images": [],
         "system": "OBGYN 1st"
     },
@@ -364,7 +365,7 @@
         "id": 40,
         "type": "Loop",
         "systemID": 8,
-        "desc": "Sagittal view of the uterus",
+        "desc": "Sagittal view of the uterus.\nConfirm IUP",
         "images": [],
         "system": "OBGYN 2nd/3rd"
     },
@@ -373,7 +374,7 @@
         "id": 41,
         "type": "Loop",
         "systemID": 8,
-        "desc": "Transverse view of the uterus",
+        "desc": "Transverse view of the uterus.\nConfirm IUP",
         "images": [],
         "system": "OBGYN 2nd/3rd"
     },
@@ -409,7 +410,7 @@
         "id": 45,
         "type": "Frame",
         "systemID": 8,
-        "desc": "Measurement of fetal heart rate",
+        "desc": "If FHR measured, must use M-mode. Avoid pulse wave doppler",
         "images": [],
         "system": "OBGYN 2nd/3rd"
     },
@@ -417,8 +418,8 @@
         "name": "Transverse",
         "id": 46,
         "type": "Loop",
-        "systemID": 9,
-        "desc": "Transverse view of the eye",
+        "systemID": 10,
+        "desc": "Fan through the transverse view of the eye.\nIncrease gain to assess for hemorrhage and detachment. ",
         "images": [],
         "system": "Ocular"
     },
@@ -426,8 +427,8 @@
         "name": "Transverse ONSD",
         "id": 47,
         "type": "Frame",
-        "systemID": 9,
-        "desc": "Transverse measurement of the optic nerve sheath",
+        "systemID": 10,
+        "desc": "Transverse measurement of the optic nerve sheath.\nAverage the value obtained with the sagittal ONSD",
         "images": [],
         "system": "Ocular"
     },
@@ -435,8 +436,8 @@
         "name": "Sagittal",
         "id": 48,
         "type": "Loop",
-        "systemID": 9,
-        "desc": "Sagittal view of the eye",
+        "systemID": 10,
+        "desc": "Fan through the sagittal view of the eye.\nIncrease gain to assess for hemorrhage and detachment. ",
         "images": [],
         "system": "Ocular"
     },
@@ -444,8 +445,8 @@
         "name": "Sagittal ONSD",
         "id": 49,
         "type": "Frame",
-        "systemID": 9,
-        "desc": "Sagittal measurement of the optic nerve sheath",
+        "systemID": 10,
+        "desc": "Sagittal measurement of the optic nerve sheath.\nAverage the value obtained with the sagittal ONSD",
         "images": [],
         "system": "Ocular"
     },
@@ -526,7 +527,7 @@
         "id": 58,
         "type": "Loop",
         "systemID": 11,
-        "desc": "Sagittal view of the normal kidney",
+        "desc": "Sagittal view of the normal soft tissue/MSK",
         "images": [],
         "system": "Soft Tissue/MSK"
     },
@@ -535,7 +536,7 @@
         "id": 59,
         "type": "Loop",
         "systemID": 11,
-        "desc": "Transverse view of the normal kidney",
+        "desc": "Transverse view of the normal soft tissue/MSK",
         "images": [],
         "system": "Soft Tissue/MSK"
     },
@@ -544,7 +545,7 @@
         "id": 60,
         "type": "Loop",
         "systemID": 11,
-        "desc": "Sagittal view of the abnormal kidney",
+        "desc": "Sagittal view of the abnormal soft tissue/MSK.\nMowing the lawn technique",
         "images": [],
         "system": "Soft Tissue/MSK"
     },
@@ -553,7 +554,7 @@
         "id": 61,
         "type": "Loop",
         "systemID": 11,
-        "desc": "Transverse view of the abnormal kidney",
+        "desc": "Transverse view of the abnormal soft tissue/MSK.\nMowing the lawn technique",
         "images": [],
         "system": "Soft Tissue/MSK"
     },
@@ -562,7 +563,7 @@
         "id": 62,
         "type": "Frame",
         "systemID": 11,
-        "desc": "Measurement of kidney length (along long axis) ",
+        "desc": "Sagittal view of the normal soft tissue/MSK.\nSave a frame with size and depth",
         "images": [],
         "system": "Soft Tissue/MSK"
     },
@@ -571,7 +572,7 @@
         "id": 63,
         "type": "Loop",
         "systemID": 12,
-        "desc": "Looking for lung sliding. Recall, stills saved for pneumothorax must be m-mode",
+        "desc": "Anterior view of the lung, must be done bilaterally.\nMinimum depth of 15cm to assess for B lines.\nAcute interstitial syndrome = at least 3 B-lines in 2 rib spaces on both sides of the chest",
         "images": [],
         "system": "Thoracic"
     },
@@ -580,7 +581,7 @@
         "id": 64,
         "type": "Loop",
         "systemID": 12,
-        "desc": "Looking for lung sliding. Stills are saved for pneumothorax must be m-mode",
+        "desc": "Lateral view of the lung, must be done bilaterally.\nMinimum depth of 15cm to assess for B lines.\nDiaphragm can be merged into the lateral or posterior views.\nAcute interstitial syndrome = at least 3 B-lines in 2 rib spaces on both sides of the chest",
         "images": [],
         "system": "Thoracic"
     },
@@ -589,7 +590,7 @@
         "id": 65,
         "type": "Loop",
         "systemID": 12,
-        "desc": "Use low frequency probe to look for B-lines. Set depth to 18cm.",
+        "desc": "Posterior view of the lung, must be done bilaterally.\nMinimum depth of 15cm to assess for B lines.\nDiaphragm can be merged into the lateral or posterior views.\nAcute interstitial syndrome = at least 3 B-lines in 2 rib spaces on both sides of the chest",
         "images": [],
         "system": "Thoracic"
     },
