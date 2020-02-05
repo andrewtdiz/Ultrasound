@@ -418,7 +418,7 @@
         "name": "Transverse",
         "id": 46,
         "type": "Loop",
-        "systemID": 10,
+        "systemID": 9,
         "desc": "Fan through the transverse view of the eye.\nIncrease gain to assess for hemorrhage and detachment. ",
         "images": [],
         "system": "Ocular"
@@ -427,7 +427,7 @@
         "name": "Transverse ONSD",
         "id": 47,
         "type": "Frame",
-        "systemID": 10,
+        "systemID": 9,
         "desc": "Transverse measurement of the optic nerve sheath.\nAverage the value obtained with the sagittal ONSD",
         "images": [],
         "system": "Ocular"
@@ -436,7 +436,7 @@
         "name": "Sagittal",
         "id": 48,
         "type": "Loop",
-        "systemID": 10,
+        "systemID": 9,
         "desc": "Fan through the sagittal view of the eye.\nIncrease gain to assess for hemorrhage and detachment. ",
         "images": [],
         "system": "Ocular"
@@ -445,7 +445,7 @@
         "name": "Sagittal ONSD",
         "id": 49,
         "type": "Frame",
-        "systemID": 10,
+        "systemID": 9,
         "desc": "Sagittal measurement of the optic nerve sheath.\nAverage the value obtained with the sagittal ONSD",
         "images": [],
         "system": "Ocular"
@@ -604,3 +604,4 @@
         "system": "Thoracic"
     }
 ]
+

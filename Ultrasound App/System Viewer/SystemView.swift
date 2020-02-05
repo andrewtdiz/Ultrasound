@@ -23,7 +23,8 @@ struct SystemView: View {
     var body: some View {
         
             ScrollView() {
-                VStack() {
+                VStack(alignment: .leading) {
+                VStack(alignment: .leading) {
                     HStack {
                         VStack(alignment: .leading) {
                             HStack {
@@ -53,7 +54,7 @@ struct SystemView: View {
                 VStack() {
                     if(system.name=="Aorta") {
                         AortaView(system: system)
-                    } else if (system.name=="Renal"){
+                    } else if (system.name=="Genitourinary"){
                         RenalView(system: system)
                     } else if (system.name=="Soft tissue/MSK"){
                         SoftMSKVue(system: system)
@@ -66,9 +67,11 @@ struct SystemView: View {
                     }
 
                     Spacer()
-                }.padding(.bottom, UIScreen.main.bounds.height/2).offset(y: system.name=="Aorta" ? -7: 0).offset(y: system.name=="Renal" ? -7: 0).offset(y: system.name=="Soft tissue/MSK" ? -7: 0).offset(y:-15)
-                    
-            }.background(Color.gray.opacity(0.12)).frame(maxHeight: .infinity).navigationBarTitle(Text(system.name))
+                }.offset(y: system.name=="Aorta" ? -7: 0).offset(y: system.name=="Genitourinary" ? -7: 0).offset(y: system.name=="Soft tissue/MSK" ? -7: 0).offset(y:-15)
+                    Spacer().frame(height:500)
+                }.background(Color.gray.opacity(0.12))
+                
+            }.navigationBarTitle(Text(system.name))
 
             
         
