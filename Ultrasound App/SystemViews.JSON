@@ -190,15 +190,6 @@
         "system": "eFAST"
     },
     {
-        "name": "Common Femoral Vein",
-        "id": 21,
-        "type": "Loop",
-        "systemID": 3,
-        "desc": "Must include from the saphenofemoral junction through the bifurcation of the common femoral vein to superficial and deep",
-        "images": [],
-        "system": "eFAST"
-    },
-    {
         "name": "Sagittal",
         "id": 22,
         "type": "Loop",

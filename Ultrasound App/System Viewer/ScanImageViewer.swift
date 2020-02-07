@@ -14,6 +14,8 @@ struct ScanImageViewer: View {
     var tabWidth = CGFloat(75)
     var images: [SystemImage]
     var labels = ["Unlabeled", "Labeled", "Clip"]
+    @State var viewState = CGSize.zero
+    
     var body: some View {
         VStack {
             HStack {
@@ -21,7 +23,7 @@ struct ScanImageViewer: View {
                     
                     HStack(spacing: CGFloat(self.offst)) {
                         if(images.count==1) {
-                            Text(self.labels[2]).font(.footnote)
+                            Text("Clip").font(.footnote)
                             .foregroundColor(Color.black).frame(width: CGFloat(self.tabWidth)).padding(.bottom, 5)
                         } else {
                         ForEach(0..<images.count, id: \.self) { i in
@@ -45,47 +47,50 @@ struct ScanImageViewer: View {
                 }.padding(.leading).frame(maxHeight: 35)
                 Spacer()
             }
-            if(images[0].type=="Frame") {
-            HStack(spacing:0) {
+            // Text(viewState.width.description)
+            HStack() {
                 
-                    ForEach(0..<images.count, id: \.self) { i in
-                        VStack() {
-                                if (i<2) {
-                                    Image(self.images[i].image).resizable().scaledToFit().cornerRadius(3).frame(width: UIScreen.main.bounds.width)
-                                } else {
-                                    GIFView(gifName: self.images[i].image)
-                                }
-                        
+                if(images[0].type=="Frame") {
+                HStack(spacing:0) {
+                    
+                        ForEach(0..<images.count, id: \.self) { i in
+                            VStack() {
+                                    if (i<2) {
+                                        Image(self.images[i].image).resizable().scaledToFit().frame(width: UIScreen.main.bounds.width)
+                                    } else {
+                                        GIFView(gifName: self.images[i].image)
+                                    }
                             
-                        }.frame(width: UIScreen.main.bounds.width).frame(maxHeight: 300)
-                            .offset(x:imgOffset(page: self.page, pages: self.images.count)).animation(.spring())
-                    }
-                
-                
-                
-                }.frame(width: UIScreen.main.bounds.width).clipped()
-                } else {
-                    VStack() {
-                        GIFView(gifName: self.images[0].image).frame(height: 300).frame(width: UIScreen.main.bounds.width)
+                                
+                            }.frame(width: UIScreen.main.bounds.width).frame(maxHeight: 300).offset(x: UIScreen.main.bounds.width/2)
+                                .animation(.spring())
+                        }
+                    
+                    
+                    
                     }.frame(width: UIScreen.main.bounds.width).clipped()
-                }
+                    } else {
+                        VStack() {
+                            GIFView(gifName: self.images[0].image).frame(height: 300).frame(width: UIScreen.main.bounds.width)
+                        }.frame(width: UIScreen.main.bounds.width).clipped()
+                    }
+            }
+            // .offset(x: viewState.width).offset(x: calcOffset(page:self.page, pages:images.count)).animation(.spring()).gesture(DragGesture()
+               //     .onChanged { value in
+                 //       self.viewState = value.translation
+                //}
+                  //  .onEnded { value in
+                    //    if(self.page==0 && self.viewState.width < -50) {
+                      //      self.page = self.page + 1
+                      //  } else if (self.page==1 && self.viewState.width < -50 && self.images.count>2) {
+                       //     self.page = self.page + 1
+                        // }
+                        // self.viewState = .zero
+                    // })
         }
     }
 }
 
-func imgOffset(page: Int, pages: Int) -> CGFloat {
-    if(pages%2==0) {
-        let first = UIScreen.main.bounds.width/2
-        let secondOne = UIScreen.main.bounds.width
-        let secondTwo = CGFloat(page - ((pages/2)-1))
-        return CGFloat(first - (secondOne * secondTwo))
-    } else {
-        let first = -UIScreen.main.bounds.width
-        let secondOne = CGFloat(page-Int(Double(pages/2) + 0.5))
-        return CGFloat(first*secondOne)
-    }
-    
-}
 
 struct ScanImageViewer_Previews: PreviewProvider {
     static var previews: some View {

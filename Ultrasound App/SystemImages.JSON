@@ -336,22 +336,6 @@
         "type": "Labeled"
     },
     {
-        "name": "Common Femoral Vein",
-        "id": 42,
-        "image": "3_21_0",
-        "viewID": 21,
-        "desc": " ",
-        "type": "Loop"
-    },
-    {
-        "name": "Common Femoral Vein",
-        "id": 43,
-        "image": "3_21_1",
-        "viewID": 21,
-        "desc": " ",
-        "type": "Labeled"
-    },
-    {
         "name": "Sagittal",
         "id": 44,
         "image": "4_22_0",
