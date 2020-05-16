@@ -10,6 +10,9 @@ import SwiftUI
 
 struct SystemListed: View {
     
+    @Binding var data: Int
+    
+    @Binding var selection: Bool
     var body: some View {
         NavigationView {
             List(systemsData) { system in
@@ -25,12 +28,23 @@ struct SystemListed: View {
                     }.frame(maxHeight: 40)
                 }
             }.navigationBarTitle(Text("Applications"))
-        
+        .navigationBarItems(trailing:
+            Button(action: {self.selection = true
+                print("Yea i changed it")
+            }){
+                Image(systemName: "gear")
+                    .scaleEffect(3/2)
+                    .frame(width: 60, height: 60)
+                    .foregroundColor(Color.gray)
+            }
+        )
         }.navigationViewStyle(StackNavigationViewStyle())
     }
 }
 struct SystemListed_Previews: PreviewProvider {
+    @State static var data1 = 0
+    @State static var data2 = false
     static var previews: some View {
-        SystemListed()
+        SystemListed(data: $data1,selection: $data2)
     }
 }

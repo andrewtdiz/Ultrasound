@@ -35,6 +35,7 @@
 		10DE428A23D428EC00847E5F /* Ultrasound_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10DE428923D428EC00847E5F /* Ultrasound_AppTests.swift */; };
 		10DE429523D428EC00847E5F /* Ultrasound_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10DE429423D428EC00847E5F /* Ultrasound_AppUITests.swift */; };
 		7145684323DF6ED200CEA90F /* GIFView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7145684223DF6ED200CEA90F /* GIFView.swift */; };
+		71CDC0CF246E298300567581 /* selectieboi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CDC0CE246E298300567581 /* selectieboi.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +91,7 @@
 		10DE429423D428EC00847E5F /* Ultrasound_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ultrasound_AppUITests.swift; sourceTree = "<group>"; };
 		10DE429623D428EC00847E5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7145684223DF6ED200CEA90F /* GIFView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GIFView.swift; sourceTree = "<group>"; };
+		71CDC0CE246E298300567581 /* selectieboi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = selectieboi.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,6 +172,7 @@
 				10DE427223D428EA00847E5F /* AppDelegate.swift */,
 				10DE427423D428EA00847E5F /* SceneDelegate.swift */,
 				10DE427623D428EA00847E5F /* ContentView.swift */,
+				71CDC0CE246E298300567581 /* selectieboi.swift */,
 				7145684223DF6ED200CEA90F /* GIFView.swift */,
 				10C1200123D439F7003C483A /* System Viewer */,
 				10DE427823D428EB00847E5F /* Assets.xcassets */,
@@ -359,6 +362,7 @@
 				10DE427523D428EA00847E5F /* SceneDelegate.swift in Sources */,
 				109119F123D4FBA400AA7AE9 /* fetcher.swift in Sources */,
 				109119ED23D4F96200AA7AE9 /* SystemImage.swift in Sources */,
+				71CDC0CF246E298300567581 /* selectieboi.swift in Sources */,
 				10935F6123DFD42C006D0621 /* AortaView.swift in Sources */,
 				10DE427723D428EA00847E5F /* ContentView.swift in Sources */,
 				109119E723D4C94800AA7AE9 /* SystemList.swift in Sources */,
