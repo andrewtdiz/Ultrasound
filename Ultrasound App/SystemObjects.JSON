@@ -2,92 +2,92 @@
     {
         "name": "Aorta",
         "id": 0,
-        "desc": "Is the Abdominal Aorta > 3 cm?\nAre the Iliac Arteries > 1.5 cm in diameter?\nIs there an aortic dissection?",
+        "desc": "Is there a AAA (abdominal aorta > 3 cm)?\nAre there an aneurysm (iliac arteries > 1.5 cm)?\nIs there an aortic dissection?",
         "views": [],
-        "icon": "aortaIcon",
+        "icon": "aortaIcon"
     },
     {
         "name": "Cardiac",
         "id": 1,
         "desc": "What is the global function/contractility?\nIs there cardiac activity?\nIs there pericardial effusion?\nAre there signs of RV strain?",
         "views": [],
-        "icon": "cardioIcon",
+        "icon": "cardioIcon"
     },
     {
         "name": "DVT",
         "id": 2,
-        "desc": "Does the Common Femoral Vein fully compress?\nDoes the Popliteal vein fully compress?",
+        "desc": "Does the common femoral vein fully compress?\nDoes the Popliteal vein fully compress?",
         "views": [],
-        "icon": "dvtIcon",
+        "icon": "dvtIcon"
     },
     {
         "name": "EFAST",
         "id": 3,
         "desc": "Is there free fluid in the abdomen?\nIs there fluid/blood in the pericardium?\nIs there blood in the thorax?\nIs there pneumothorax?",
         "views": [],
-        "icon": "efastIcon",
+        "icon": "efastIcon"
     },
     {
         "name": "Gallbladder",
         "id": 4,
-        "desc": "Are there Gallstones?\nIs there a Murphie's sign?\nIs there thickening of the CBD or anterior wall?\nIs there pericholecystic fluid?",
+        "desc": "Are there gallstones?\nIs there a Murphy's sign?\nIs there thickening of the common bile duct or anterior wall?\nIs there pericholecystic fluid?",
         "views": [],
-        "icon": "gallbladderIcon",
+        "icon": "gallbladderIcon"
     },
     {
         "name": "HIMAP",
         "id": 5,
         "desc": "Is the patient in shock?\nIs there evidence of pulmonary embolism or pneumonia?\nAre there signs of MI or cardiac tamponade?",
         "views": [],
-        "icon": "himapIcon",
+        "icon": "himapIcon"
     },
     {
         "name": "IVC",
         "id": 6,
-        "desc": "Is the IVC < 1.5 cm or > 2.5 cm?\n Does the IVC collapse >50% with respiration?",
+        "desc": "Is the IVC < 1.5 cm or > 2.5 cm?\nDoes the IVC collapse >50% with respiration?",
         "views": [],
-        "icon": "ivcIcon",
+        "icon": "ivcIcon"
     },
     {
-        "name": "OB/GYN 1st",
+        "name": "OB 1 Timester",
         "id": 7,
-        "desc": "Is there intrauterine pregnancy?",
+        "desc": "Is there a yolk sac?\nIs there an IUP?",
         "views": [],
-        "icon": "obgynIcon",
+        "icon": "obgynIcon"
     },
     {
-        "name": "OBGYN 2nd/3rd",
+        "name": "OB 2/3 Timester",
         "id": 8,
-        "desc": "Is there a viable intrauterine pregnancy?",
+        "desc": "Is there a viable intrauterine pregnancy?\nIs there sufficient amniotic fluid?\nIs the cervix open or closed?",
         "views": [],
-        "icon": "obgyn23Icon",
+        "icon": "obgyn23Icon"
     },
     {
         "name": "Ocular",
         "id": 9,
-        "desc": "Is the Optic Nerve Sheath > 5 mm?\nIs there other ocular pathology?",
+        "desc": "Is the optic nerve sheath > 5 mm?\nIs there retinal detachment or vitrious hemorrhage?\nIs there other ocular pathology?",
         "views": [],
-        "icon": "ocularIcon",
+        "icon": "ocularIcon"
     },
     {
         "name": "Genitourinary",
         "id": 10,
         "desc": "Is there hydronephrosis?\nIs the bladder distended?",
         "views": [],
-        "icon": "kidneyIcon",
+        "icon": "kidneyIcon"
     },
     {
         "name": "Soft Tissue/MSK",
         "id": 11,
-        "desc": "Is there fluid collection? Signs of fasciitis or foreign body?\nIs there an interruption in bony cortex?\nCan the degree of angulation or displacement be assessed?\nIs there tendon injury?",
+        "desc": "Is there a fluid collection?\nIs there cellultis or an abscess?\nIs there a fracture, tendon injury, joint effusion, or foreign body?",
         "views": [],
-        "icon": "softtissueIcon",
+        "icon": "softtissueIcon"
     },
     {
         "name": "Thoracic",
         "id": 12,
-        "desc": "Are A-lines present?\nAre B-lines present?",
+        "desc": "Is the lung normal?\nIs there acute interstitial syndrome?\nIs there pleural effusion?\nIs there infiltrate or consolidation?",
         "views": [],
-        "icon": "respiratoryIcon",
+        "icon": "respiratoryIcon"
     }
 ]

@@ -12,10 +12,11 @@ struct SystemViewObject : Codable, Hashable, Identifiable {
     
     var id: Int
     var name: String
-    
+    var dostring: String
+    var optimize: String
+    var measure: String
     var type: String
     var systemID: Int
-    var desc: String
     var images: [SystemImage]
     
 }

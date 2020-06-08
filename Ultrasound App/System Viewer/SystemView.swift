@@ -27,6 +27,15 @@ struct SystemView: View {
                 VStack(alignment: .leading) {
                     HStack {
                         VStack(alignment: .leading) {
+                            if(system.name=="Cardiac") {
+                                HStack {
+                                    Text("*Must include IVC*")
+                                        .multilineTextAlignment(.leading)
+                                        .lineLimit(nil)
+                                        .font(.footnote).padding(.top, 5).fixedSize(horizontal: false, vertical: true).offset(y:15)
+                                    Spacer()
+                                }
+                            }
                             HStack {
                                 Text("QUESTIONS")
                                 .font(.footnote)
@@ -155,6 +164,6 @@ func tabOffset(page: Int, pages: Int, tabWidth: Int, offst: Int) -> CGFloat {
 
 struct SystemView_Previews: PreviewProvider {
     static var previews: some View {
-        SystemView(system: systemsData[0])
+        SystemView(system: systemsData[1])
     }
 }

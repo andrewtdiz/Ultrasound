@@ -13,40 +13,59 @@ struct ScanView: View {
     
     var body: some View {
         ScrollView {
-            VStack() {
-                HStack {
-                    VStack(alignment: .leading) {
-                        HStack {
-                            Text("LAST UPDATED ONE WEEK AGO")
-                            .font(.footnote)
-                            .foregroundColor(Color.gray)
-                            Spacer()
-                            
-                        }.frame(minWidth: 0, maxWidth: UIScreen.main.bounds.width*(7/8))
-                        Spacer().frame(height: 20)
-
-                    }
-                    Spacer()
-                }.padding(.leading, 20)
-                
-
-                
-                Divider().padding(.vertical, 0)
-            }
             if(!scan.images.isEmpty) {
-                ScanImageViewer(images: scan.images).padding(.top)
+                ScanImageViewer(images: scan.images)
             }
-            HStack() {
-                Text(scan.desc).font(.body).padding(.horizontal)
-                Spacer()
+            VStack {
+                if(scan.dostring != " ") {
+                    HStack {
+                        Text("DO")
+                        .font(.footnote)
+                        .foregroundColor(Color.black.opacity(0.6))
+                        Spacer()
+                    }.padding(.horizontal).padding(.top, 30).padding(.bottom, 10)
+                    HStack {
+                        Text(scan.dostring).font(.body).padding(.horizontal).padding(.vertical)
+                        Spacer()
+                    }
+                }
+                if(scan.optimize != " ") {
+                    HStack {
+                        Text("OPTIMIZE")
+                        .font(.footnote)
+                        .foregroundColor(Color.black.opacity(0.6))
+                        Spacer()
+                    }
+                    .padding(.horizontal).padding(.top, 30).padding(.bottom, 10)
+                    HStack {
+                        Text(scan.optimize).font(.body).padding(.horizontal).padding(.vertical)
+                        Spacer()
+                    }
+                }
+                if(scan.measure != " ") {
+                    HStack {
+                        Text("MEASURE")
+                        .font(.footnote)
+                        .foregroundColor(Color.black.opacity(0.6))
+                        Spacer()
+                    }.padding(.horizontal).padding(.top, 30).padding(.bottom, 10)
+                    HStack {
+                        Text(scan.measure).font(.body).padding(.horizontal).padding(.vertical)
+                        Spacer()
+                    }
+                    
+//                }
             }
             
-        }.offset(y:-2).navigationBarTitle(Text(scan.name))
+        }
+        .offset(y:-2)
+        .navigationBarTitle(Text(scan.name))
     }
 }
 
 struct ScanView_Previews: PreviewProvider {
     static var previews: some View {
-        ScanView(scan: systemsData[0].views[0])
+        ScanView(scan: systemsData[1].views[0])
     }
+}
 }

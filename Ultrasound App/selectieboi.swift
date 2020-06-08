@@ -10,15 +10,28 @@ import SwiftUI
 
 struct selectieboi: View {
     
-    var categories = ["📖   TanjieLad    ", "🎵   ShibeTown   "]
+    var categories = ["Jackson Memorial", "Mount Sinai Medical", "Aventura Hospital"]
     @Binding var category: Int
     
     var body: some View {
-        Picker(selection: $category, label: Text("")) {
-                       ForEach(0 ..< categories.count) {
-                        Text(self.categories[$0]).foregroundColor(Color.black).multilineTextAlignment(.leading)
-                       }
+        VStack() {
+            HStack() {
+                Text("Ultrasound App").font(.largeTitle)
+                
+            }.padding(.vertical)
+            Spacer()
+            HStack() {
+               Text("Select your institution:")
+                Spacer()
+            }.padding()
+            
+            Picker(selection: $category, label: Text("")) {
+                           ForEach(0 ..< categories.count) {
+                            Text(self.categories[$0]).foregroundColor(Color.black).multilineTextAlignment(.leading)
+                           }
+            }
         }
+        
     }
 }
 

@@ -256,7 +256,7 @@
         "type": "Labeled"
     },
     {
-        "name": "Sagittal Suprapubic",
+        "name": "Suprapubic Sag",
         "id": 32,
         "image": "3_16_0",
         "viewID": 16,
@@ -264,7 +264,7 @@
         "type": "Loop"
     },
     {
-        "name": "Sagittal Suprapubic",
+        "name": "Suprapubic Sag",
         "id": 33,
         "image": "3_16_1",
         "viewID": 16,
@@ -272,7 +272,7 @@
         "type": "Labeled"
     },
     {
-        "name": "Transv. Suprapubic",
+        "name": "Suprapubic Transverse",
         "id": 34,
         "image": "3_17_0",
         "viewID": 17,
@@ -280,7 +280,7 @@
         "type": "Loop"
     },
     {
-        "name": "Transv. Suprapubic",
+        "name": "Suprapubic Transverse",
         "id": 35,
         "image": "3_17_1",
         "viewID": 17,
@@ -402,7 +402,7 @@
     {
         "name": "Heart",
         "id": 52,
-        "image": "5_26_0",
+        "image": "1_7_0",
         "viewID": 26,
         "desc": " ",
         "type": "Loop"
@@ -410,7 +410,7 @@
     {
         "name": "Heart",
         "id": 53,
-        "image": "5_26_1",
+        "image": "1_7_1",
         "viewID": 26,
         "desc": " ",
         "type": "Labeled"
@@ -418,7 +418,7 @@
     {
         "name": "IVC",
         "id": 54,
-        "image": "5_27_0",
+        "image": "6_31_0",
         "viewID": 27,
         "desc": " ",
         "type": "Loop"
@@ -426,7 +426,7 @@
     {
         "name": "IVC",
         "id": 55,
-        "image": "5_27_1",
+        "image": "6_31_1",
         "viewID": 27,
         "desc": " ",
         "type": "Labeled"
@@ -434,7 +434,7 @@
     {
         "name": "Morrison's Pouch",
         "id": 56,
-        "image": "5_28_0",
+        "image": "3_14_0",
         "viewID": 28,
         "desc": " ",
         "type": "Loop"
@@ -442,7 +442,7 @@
     {
         "name": "Morrison's Pouch",
         "id": 57,
-        "image": "5_28_1",
+        "image": "3_14_1",
         "viewID": 28,
         "desc": " ",
         "type": "Labeled"
@@ -450,7 +450,7 @@
     {
         "name": "Aorta",
         "id": 58,
-        "image": "5_29_0",
+        "image": "0_1_0",
         "viewID": 29,
         "desc": " ",
         "type": "Loop"
@@ -458,7 +458,7 @@
     {
         "name": "Aorta",
         "id": 59,
-        "image": "5_29_1",
+        "image": "0_1_1",
         "viewID": 29,
         "desc": " ",
         "type": "Labeled"
@@ -466,7 +466,7 @@
     {
         "name": "Pulmonary",
         "id": 60,
-        "image": "5_30_0",
+        "image": "12_63_0",
         "viewID": 30,
         "desc": " ",
         "type": "Loop"
@@ -474,7 +474,7 @@
     {
         "name": "Pulmonary",
         "id": 61,
-        "image": "5_30_1",
+        "image": "12_63_1",
         "viewID": 30,
         "desc": " ",
         "type": "Labeled"

@@ -20,7 +20,7 @@ struct ContentView: View {
         }
         .onAppear(){
             self.category = self.defaults.object(forKey: "category") as? Int ?? -1
-            if (self.category != -1){
+            if (self.category == -1){
                 self.selection = true
             }
             print("category set to: " , self.defaults.object(forKey: "category") as? Int ?? -1)
@@ -39,6 +39,7 @@ struct ContentView: View {
                         Text("Save changes")
                             .opacity((self.category != self.categoryFirst) ? 1 : 0.5 )
                     }
+                Spacer()
             }
         })
     }
