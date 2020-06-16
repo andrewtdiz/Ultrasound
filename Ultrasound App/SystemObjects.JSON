@@ -2,35 +2,35 @@
     {
         "name": "Aorta",
         "id": 0,
-        "desc": "Is there a AAA (abdominal aorta > 3 cm)?\nAre there an aneurysm (iliac arteries > 1.5 cm)?\nIs there an aortic dissection?",
+        "desc": "Is there an abdominal aortic aneurysm (abdominal aorta > 3 cm)?\nIs there an iliac artery aneurysm (iliac arteries > 1.5cm)?\nIs there an aortic dissection?",
         "views": [],
         "icon": "aortaIcon"
     },
     {
         "name": "Cardiac",
         "id": 1,
-        "desc": "What is the global function/contractility?\nIs there cardiac activity?\nIs there pericardial effusion?\nAre there signs of RV strain?",
+        "desc": "What is the global function/contractility?\nIs there cardiac activity?\nIs there a pericardial effusion?\nAre there signs of right ventricular strain?",
         "views": [],
         "icon": "cardioIcon"
     },
     {
         "name": "DVT",
         "id": 2,
-        "desc": "Does the common femoral vein fully compress?\nDoes the Popliteal vein fully compress?",
+        "desc": "Does the common femoral vein fully compress?\nDoes the superficial femoral vein full compress?\nDoes the popliteal vein fully compress?",
         "views": [],
         "icon": "dvtIcon"
     },
     {
         "name": "EFAST",
         "id": 3,
-        "desc": "Is there free fluid in the abdomen?\nIs there fluid/blood in the pericardium?\nIs there blood in the thorax?\nIs there pneumothorax?",
+        "desc": "Is there free fluid in the abdomen?\nIs there fluid in the pericardium?\nIs there fluid in the thorax?\nIs there pneumothorax?",
         "views": [],
         "icon": "efastIcon"
     },
     {
         "name": "Gallbladder",
         "id": 4,
-        "desc": "Are there gallstones?\nIs there a Murphy's sign?\nIs there thickening of the common bile duct or anterior wall?\nIs there pericholecystic fluid?",
+        "desc": "Are gallstones present?\nIs there a Murphy's sign?\nIs the common bile duct dilated?\nIs the wall thickened?\nIs there pericholecystic fluid?",
         "views": [],
         "icon": "gallbladderIcon"
     },
@@ -51,42 +51,42 @@
     {
         "name": "OB 1 Timester",
         "id": 7,
-        "desc": "Is there a yolk sac?\nIs there an IUP?",
+        "desc": "Is there a yolk sac?\nIs there a fetal heart rate?\nIs this a viable IUP?",
         "views": [],
         "icon": "obgynIcon"
     },
     {
         "name": "OB 2/3 Timester",
         "id": 8,
-        "desc": "Is there a viable intrauterine pregnancy?\nIs there sufficient amniotic fluid?\nIs the cervix open or closed?",
+        "desc": "Is there a viable intrauterine pregnancy?\nIs there sufficient amniotic fluid?\nIs the placenta over the cervical inner os?",
         "views": [],
         "icon": "obgyn23Icon"
     },
     {
         "name": "Ocular",
         "id": 9,
-        "desc": "Is the optic nerve sheath > 5 mm?\nIs there retinal detachment or vitrious hemorrhage?\nIs there other ocular pathology?",
+        "desc": "Is the optic nerve sheath > 5 mm?\nIs there retinal detachment or vitrious hemorrhage/detachment?",
         "views": [],
         "icon": "ocularIcon"
     },
     {
         "name": "Genitourinary",
         "id": 10,
-        "desc": "Is there hydronephrosis?\nIs the bladder distended?",
+        "desc": "Is there hydronephrosis?\nIs there urinary retention?",
         "views": [],
         "icon": "kidneyIcon"
     },
     {
         "name": "Soft Tissue/MSK",
         "id": 11,
-        "desc": "Is there a fluid collection?\nIs there cellultis or an abscess?\nIs there a fracture, tendon injury, joint effusion, or foreign body?",
+        "desc": "Is there an abscess?\nIs there cellulitis or edema ?\nIs there a fracture, tendon injury, joint effusion, or foreign body?",
         "views": [],
         "icon": "softtissueIcon"
     },
     {
         "name": "Thoracic",
         "id": 12,
-        "desc": "Is the lung normal?\nIs there acute interstitial syndrome?\nIs there pleural effusion?\nIs there infiltrate or consolidation?",
+        "desc": "Is there an acute interstitial syndrome?\nIs there a pleural effusion?\nIs there an infiltrate or consolidation?",
         "views": [],
         "icon": "respiratoryIcon"
     }

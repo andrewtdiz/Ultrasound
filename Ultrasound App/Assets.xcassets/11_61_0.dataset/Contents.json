@@ -1,0 +1,13 @@
+{
+  "data" : [
+    {
+      "filename" : "ST-trans-abnormal.mov",
+      "idiom" : "universal",
+      "universal-type-identifier" : "com.apple.quicktime-movie"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
