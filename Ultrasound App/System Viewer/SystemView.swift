@@ -7,6 +7,7 @@
 //
 
 import SwiftUI
+import Firebase
 
 struct SystemView: View {
     
@@ -80,7 +81,11 @@ struct SystemView: View {
                     Spacer().frame(height:500)
                 }.background(Color.gray.opacity(0.12))
                 
-            }.navigationBarTitle(Text(system.name))
+            }.navigationBarTitle(Text(system.name)).onAppear(){
+                Analytics.logEvent("Opened_application", parameters: ["application" : self.system.name])
+        }.onDisappear(){
+                Analytics.logEvent("Closed_application", parameters: ["application" : self.system.name])
+        }
 
             
         

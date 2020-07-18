@@ -7,6 +7,7 @@
 //
 
 import SwiftUI
+import Firebase
 
 struct SystemListed: View {
     
@@ -27,7 +28,9 @@ struct SystemListed: View {
                             .padding(.leading)
                     }.frame(maxHeight: 40)
                 }
-            }.navigationBarTitle(Text("Applications"))
+            }.navigationBarTitle(Text("Applications")).onAppear(){
+                    Analytics.logEvent("Opened_list", parameters: nil)
+            }
         .navigationBarItems(trailing:
             Button(action: {self.selection = true
                 print("Yea i changed it")
@@ -38,7 +41,7 @@ struct SystemListed: View {
                     .foregroundColor(Color.gray)
             }
         )
-        }.navigationViewStyle(StackNavigationViewStyle())
+            }.navigationViewStyle(StackNavigationViewStyle())
     }
 }
 struct SystemListed_Previews: PreviewProvider {

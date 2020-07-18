@@ -29,8 +29,8 @@ struct ScanImageViewer: View {
                 }else{
                     GIFView(gifName: self.images[0].image).frame(height: 300).frame(width: UIScreen.main.bounds.width)
                     .opacity((self.isLabeled) ? 0:1)
-                    GIFView(gifName: self.images[1].image).frame(height: 300).frame(width: UIScreen.main.bounds.width)
-                        .opacity((self.isLabeled) ? 1:0)
+                    Image(self.images[1].image).resizable().scaledToFit().frame(height: 300).frame(width: UIScreen.main.bounds.width)
+                    .opacity((self.isLabeled) ? 1:0)
                 }
             }
             HStack() {

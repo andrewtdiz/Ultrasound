@@ -7,6 +7,7 @@
 //
 
 import SwiftUI
+import Firebase
 
 struct ScanView: View {
     var scan: SystemViewObject
@@ -20,37 +21,37 @@ struct ScanView: View {
                 if(scan.dostring != " ") {
                     HStack {
                         Text("DO")
-                        .font(.footnote)
-                        .foregroundColor(Color.black.opacity(0.6))
+                            .font(.subheadline)
+                        .foregroundColor(Color.black.opacity(0.5))
                         Spacer()
-                    }.padding(.horizontal).padding(.top, 30).padding(.bottom, 10)
+                    }.padding(.horizontal).padding(.top, 30)
                     HStack {
-                        Text(scan.dostring).font(.body).padding(.horizontal).padding(.vertical)
+                        Text(scan.dostring).font(.body).padding(.horizontal).padding(.vertical, 8)
                         Spacer()
                     }
                 }
                 if(scan.optimize != " ") {
                     HStack {
                         Text("OPTIMIZE")
-                        .font(.footnote)
-                        .foregroundColor(Color.black.opacity(0.6))
+                            .font(.subheadline)
+                        .foregroundColor(Color.black.opacity(0.5))
                         Spacer()
                     }
-                    .padding(.horizontal).padding(.top, 30).padding(.bottom, 10)
+                    .padding(.horizontal).padding(.top, 30)
                     HStack {
-                        Text(scan.optimize).font(.body).padding(.horizontal).padding(.vertical)
+                        Text(scan.optimize).font(.body).padding(.horizontal).padding(.vertical, 8)
                         Spacer()
                     }
                 }
                 if(scan.measure != " ") {
                     HStack {
                         Text("MEASURE")
-                        .font(.footnote)
-                        .foregroundColor(Color.black.opacity(0.6))
+                            .font(.subheadline)
+                        .foregroundColor(Color.black.opacity(0.5))
                         Spacer()
-                    }.padding(.horizontal).padding(.top, 30).padding(.bottom, 10)
+                    }.padding(.horizontal).padding(.top, 30)
                     HStack {
-                        Text(scan.measure).font(.body).padding(.horizontal).padding(.vertical)
+                        Text(scan.measure).font(.body).padding(.horizontal).padding(.vertical, 8)
                         Spacer()
                     }
                     
@@ -59,7 +60,9 @@ struct ScanView: View {
             
         }
         .offset(y:-2)
-        .navigationBarTitle(Text(scan.name))
+        .navigationBarTitle(Text(scan.name)).onAppear(){
+                Analytics.logEvent("Opened_view", parameters: ["application" : self.scan.name])
+        }
     }
 }
 
