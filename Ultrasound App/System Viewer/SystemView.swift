@@ -71,7 +71,13 @@ struct SystemView: View {
                     } else {
                         VStack() {
                             ForEach(system.views, id: \.self) { view in
-                                link(label: view.name, destination: ScanView(scan: view), first: false, view: view)
+                                VStack(){
+                                    if (view.type=="System") {
+                                        link(label: view.name, destination: SystemView(system:  systemsData[findSystemID(systemName: view.system)]), first: false, view: view)
+                                    } else {
+                                        link(label: view.name, destination: ScanView(scan: view), first: false, view: view)
+                                    }
+                                }
                             }
                         }.padding(.vertical, 20).frame(minHeight: 0, maxHeight: .infinity)
                     }
@@ -92,6 +98,17 @@ struct SystemView: View {
     }
     
 }
+
+func findSystemID(systemName: String) -> Int{
+    for i in 0...systemsData.count{
+        if (systemsData[i].name == systemName){
+            print("Got the system: " , i)
+            return i
+        }
+    }
+    return 0
+}
+
 
 func link<Destination: View>(label: String, destination: Destination, first: Bool, view: SystemViewObject) -> some View {
 

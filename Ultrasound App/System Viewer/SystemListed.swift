@@ -11,9 +11,15 @@ import Firebase
 
 struct SystemListed: View {
     
+    let defaults = UserDefaults.standard
+    
     @Binding var data: Int
     
     @Binding var selection: Bool
+    
+    @Binding var activeSheet: ActiveSheet
+    
+    
     var body: some View {
         NavigationView {
             List(systemsData) { system in
@@ -30,24 +36,38 @@ struct SystemListed: View {
                 }
             }.navigationBarTitle(Text("Applications")).onAppear(){
                     Analytics.logEvent("Opened_list", parameters: nil)
+                Analytics.setUserID(self.defaults.object(forKey: "userID") as? String ?? "")
             }
-        .navigationBarItems(trailing:
-            Button(action: {self.selection = true
-                print("Yea i changed it")
-            }){
-                Image(systemName: "gear")
-                    .scaleEffect(3/2)
-                    .frame(width: 60, height: 60)
-                    .foregroundColor(Color.gray)
-            }
+        .navigationBarItems(leading:
+                Button(action: {self.selection = true
+                    self.activeSheet = .second
+                    
+                }){
+                    Text("About")
+                }, trailing:
+                Button(action: {self.selection = true
+                    self.activeSheet = .first
+                    
+                }){
+                    Image(systemName: "gear")
+                        .scaleEffect(3/2)
+                        .frame(width: 60, height: 60)
+                        .foregroundColor(Color.gray)
+                }
+            
+            
         )
+            
             }.navigationViewStyle(StackNavigationViewStyle())
     }
 }
+
+
 struct SystemListed_Previews: PreviewProvider {
     @State static var data1 = 0
     @State static var data2 = false
+    @State static var data3: ActiveSheet = .first
     static var previews: some View {
-        SystemListed(data: $data1,selection: $data2)
+        SystemListed(data: $data1, selection: $data2, activeSheet: $data3)
     }
 }

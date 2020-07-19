@@ -1,12 +1,13 @@
 {
-  "info" : {
-    "version" : 1,
-    "author" : "xcode"
-  },
   "data" : [
     {
+      "filename" : "r_resp_cva.gif",
       "idiom" : "universal",
-      "filename" : "12_66_0.gif"
+      "universal-type-identifier" : "com.compuserve.gif"
     }
-  ]
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
 }

@@ -18,5 +18,6 @@ struct SystemViewObject : Codable, Hashable, Identifiable {
     var type: String
     var systemID: Int
     var images: [SystemImage]
+    var system: String
     
 }

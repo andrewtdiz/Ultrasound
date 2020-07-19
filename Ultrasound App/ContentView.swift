@@ -12,17 +12,38 @@ import Firebase
 struct ContentView: View {
     let defaults = UserDefaults.standard
     @State private var selection = false
-    @State var category = -1
+    @State private var aboutSection = false
+    @State var category = -1 {
+        didSet {
+            print("DidSet: " , category)
+            switch category {
+            case 0:
+                systemsData = combineSysAndViews(viewsData: load("SystemViews.JSON"), systemsData:load("SystemObjects.JSON"), systemsImages:load("SystemImages.JSON"))
+                break;
+            case 1:
+                systemsData = combineSysAndViews(viewsData: load("SystemViewsMSMC.JSON"), systemsData:load("SystemObjectsMSMC.JSON"), systemsImages:load("SystemImagesMSMC.JSON"))
+                break;
+            default:
+                systemsData = combineSysAndViews(viewsData: load("SystemViews.JSON"), systemsData:load("SystemObjects.JSON"), systemsImages:load("SystemImages.JSON"))
+                break;
+            }
+        }
+    }
     @State var categoryFirst = 0
     @State var userID = ""
     @State var tempUserID = ""
     @State var alert = false
     
+    @State private var activeSheet: ActiveSheet = .first
+    
     var body: some View {
         ZStack{
-            SystemListed(data: $category, selection: $selection)
+            SystemListed(data: $category, selection: $selection, activeSheet: $activeSheet)
         }
         .onAppear(){
+            self.userID = self.defaults.object(forKey: "userID") as? String ?? ""
+            self.tempUserID = self.userID
+            print("Creebo-->" , self.userID,"<---")
             self.category = self.defaults.object(forKey: "category") as? Int ?? -1
             if (self.category == -1){
                 self.selection = true
@@ -41,6 +62,9 @@ struct ContentView: View {
                 self.defaults.set(self.userID, forKey: "userID")
             }
         }, content: {
+            if self.activeSheet == .second {
+                About()
+            } else {
             VStack{
                 if(self.userID == "" && self.selection) {
                     VStack(spacing: 0) {
@@ -82,9 +106,17 @@ struct ContentView: View {
                 }
                 Spacer()
             }
+            }
             })
     }
 }
+
+
+enum ActiveSheet {
+   case first, second
+}
+
+
 //struct selectionView: View {
 //    @Binding var category :Int
 //    @Binding var categoryFirst:Int

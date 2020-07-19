@@ -12,6 +12,8 @@ import Firebase
 struct ScanView: View {
     var scan: SystemViewObject
     
+    let defaults = UserDefaults.standard
+    
     var body: some View {
         ScrollView {
             if(!scan.images.isEmpty) {
@@ -57,11 +59,14 @@ struct ScanView: View {
                     
 //                }
             }
+                Text("Note: The reference(s) for any and all medical information on this page can be accessed in the About tab of the home page.")
+                    .font(.caption).padding(.top)
             
         }
         .offset(y:-2)
         .navigationBarTitle(Text(scan.name)).onAppear(){
                 Analytics.logEvent("Opened_view", parameters: ["application" : self.scan.name])
+            Analytics.setUserID(self.defaults.object(forKey: "userID") as? String ?? "")
         }
     }
 }

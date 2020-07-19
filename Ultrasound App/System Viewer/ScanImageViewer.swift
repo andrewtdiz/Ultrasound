@@ -7,6 +7,7 @@
 //
 
 import SwiftUI
+import Firebase
 
 struct ScanImageViewer: View {
     @State var page = 0
@@ -14,7 +15,18 @@ struct ScanImageViewer: View {
     var tabWidth = CGFloat(75)
     var images: [SystemImage]
     var labels = ["Unlabeled", "Labeled", "Clip"]
-    @State var isLabeled:Bool = false
+    let defaults = UserDefaults.standard
+    @State var isLabeled:Bool = false{
+        didSet{
+            if (isLabeled) {
+                 Analytics.logEvent("Image_opened", parameters: nil)
+                Analytics.setUserID(self.defaults.object(forKey: "userID") as? String ?? "")
+            } else {
+                Analytics.logEvent("Image_closed", parameters: nil)
+                Analytics.setUserID(self.defaults.object(forKey: "userID") as? String ?? "")
+            }
+        }
+    }
     @State var viewState = CGSize.zero
     
     var body: some View {
