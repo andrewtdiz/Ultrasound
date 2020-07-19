@@ -1,0 +1,6 @@
+framework module Pods_Ultrasound_App_Ultrasound_AppUITests {
+  umbrella header "Pods-Ultrasound App-Ultrasound AppUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

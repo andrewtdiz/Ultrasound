@@ -1,0 +1,130 @@
+[
+    {
+        "name": "Aorta",
+        "id": 0,
+        "desc": "Is there an abdominal aortic aneurysm (abdominal aorta > 3 cm)?\nIs there an iliac artery aneurysm (iliac arteries > 1.5 cm)?\nIs there an aortic dissection?",
+        "views": [],
+        "icon": "aortaIcon"
+    },
+    {
+        "name": "Cardiac",
+        "id": 1,
+        "desc": "What is the global function/contractility?\nIs there cardiac activity?\nIs there a pericardial effusion?\nAre there signs of right ventricular strain?",
+        "views": [],
+        "icon": "cardioIcon"
+    },
+    {
+        "name": "LE Venous",
+        "id": 2,
+        "desc": "Does the common femoral vein fully compress?\nDoes the superficial femoral vein full compress?\nDoes the popliteal vein fully compress?\nDoes the proximal saphenous vein compress?",
+        "views": [],
+        "icon": "dvtIcon"
+    },
+    {
+        "name": "EFAST",
+        "id": 3,
+        "desc": "*For trauma indications must obtain all*\n*For indications other than trauma for free fluid (ruptured ectopic) only need RUQ/LUQ/Suprapubic*\nIs there free fluid in the abdomen?\nIs there fluid in the pericardium?\nIs there fluid in the thorax?\nIs there a pneumothorax?",
+        "views": [],
+        "icon": "efastIcon"
+    },
+    {
+        "name": "Gallbladder",
+        "id": 4,
+        "desc": "Are gallstones present?\nIs there a Murphy's sign?\nIs the common bile duct dilated?\nIs the wall thickened?\nIs there pericholecystic fluid?\nIs the gallbladder greater than 10 x 5 cm?\nIs there an impacted stone in the neck?",
+        "views": [],
+        "icon": "gallbladderIcon"
+    },
+    {
+        "name": "HIMAP",
+        "id": 5,
+        "desc": "Is the patient in shock?\nIs this obstructive shock?\nIs this hemorrhagic or hypovolemic shock? \nIs this distributive shock?\nIs there evidence of pulmonary embolism or pneumonia?\nIs this cardiogenic shock?",
+        "views": [],
+        "icon": "himapIcon"
+    },
+    {
+        "name": "IVC",
+        "id": 6,
+        "desc": "Is the IVC < 1.5 cm or > 2.5 cm?\nDoes the IVC collapse > 50% with respiration?",
+        "views": [],
+        "icon": "ivcIcon"
+    },
+    {
+        "name": "OB 1 Trans Abd",
+        "id": 7,
+        "desc": "Is there a yolk sac?\nIs there a fetal heart rate?\nIs this a viable IUP?",
+        "views": [],
+        "icon": "obgynTAIcon"
+    },
+    {
+        "name": "OB 2/3 Timester",
+        "id": 8,
+        "desc": "Is there a viable intrauterine pregnancy?\nIs there sufficient amniotic fluid?\nIs the placenta over the inner cervical os?",
+        "views": [],
+        "icon": "obgyn23Icon"
+    },
+    {
+        "name": "Ocular",
+        "id": 9,
+        "desc": "Is the optic nerve sheath > 5 mm?\nIs there retinal detachment or vitreous hemorrhage/detachment?",
+        "views": [],
+        "icon": "ocularIcon"
+    },
+    {
+        "name": "Genitourinary",
+        "id": 10,
+        "desc": "Is there hydronephrosis? If so, what degree?\nIs there urinary retention?",
+        "views": [],
+        "icon": "kidneyIcon"
+    },
+    {
+        "name": "Soft Tissue/MSK",
+        "id": 11,
+        "desc": "Is there an abscess?\nIs there cellulitis or edema ?\nIs there a fracture, tendon injury, joint effusion, or foreign body?",
+        "views": [],
+        "icon": "softtissueIcon"
+    },
+    {
+        "name": "Thoracic",
+        "id": 12,
+        "desc": "Is there an acute interstitial syndrome?\nIs there a pleural effusion?\nIs there an infiltrate or consolidation?",
+        "views": [],
+        "icon": "respiratoryIcon"
+    },
+    
+    {
+        "name": "OB 1 Trans Vag",
+        "id": 14,
+        "desc": "Is there a yolk sac?\nIs there fetal heart rate?\nIs this a viable IUP?",
+        "views": [],
+        "icon": "obgynTVIcon"
+    },
+    {
+        "name": "RUSH",
+        "id": 15,
+        "desc": "Is there a problem with the pump?\nIs there a problem with the pipes?\nIs there a problem with the tank?",
+        "views": [],
+        "icon": "rushIcon"
+    },
+    {
+        "name": "Triple Scan",
+        "id": 16,
+        "desc": "Is this COPD/asthma?\nIs this acute pulmonary edema? \nIs this a pneumonia?\nIs this a pulmonary embolism?",
+        "views": [],
+        "icon": "tripleScanIcon"
+    },
+    
+    {
+        "name": "GI Bowel",
+        "id": 17,
+        "desc": "Is there bowel obstruction?\nWhat is the patient's bladder volume status?",
+        "views": [],
+        "icon": "giIcon"
+    },
+    {
+        "name": "GI Appendix",
+        "id": 18,
+        "desc": "Is there an appendicitis?",
+        "views": [],
+        "icon": "giAppIcon"
+    }
+]
