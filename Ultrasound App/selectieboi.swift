@@ -20,7 +20,20 @@ struct selectieboi: View {
                 Text(categories[category]).font(.title)
                 
             }.padding(.vertical)
-            JacksonRequirements()
+            if(categories[category]=="Aventura Hospital") {
+                SinaiRequirements()
+            } else if(categories[category]=="Mount Sinai Medical") {
+                AventuraRequirements()
+            } else if(categories[category]=="Jackson Memorial") {
+                JacksonRequirements()
+            } else {
+                HStack() {
+                    Text("Number needed to graduate: 250 scans.")
+                    .font(.body)
+                    Spacer()
+                }
+            }
+            
             Spacer()
 //            HStack() {
 //               Text("Select your institution:")

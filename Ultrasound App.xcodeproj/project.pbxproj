@@ -15,6 +15,7 @@
 		05B981E524C4015B002C729A /* SystemObjectsAVENTURA.JSON in Resources */ = {isa = PBXBuildFile; fileRef = 05B981E224C4015B002C729A /* SystemObjectsAVENTURA.JSON */; };
 		05B981E824C410C4002C729A /* JacksonRequirements.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B981E724C410C4002C729A /* JacksonRequirements.swift */; };
 		05B981EA24C413A6002C729A /* AventuraRequirements.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B981E924C413A6002C729A /* AventuraRequirements.swift */; };
+		05B981EC24C41C35002C729A /* SinaiRequirements.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B981EB24C41C35002C729A /* SinaiRequirements.swift */; };
 		05D79ED924C331E9009D79D2 /* About.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D79ED824C331E9009D79D2 /* About.swift */; };
 		05D79EDB24C34A73009D79D2 /* AboutImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D79EDA24C34A73009D79D2 /* AboutImages.swift */; };
 		05FA246B24BB867E00FB6809 /* FirebaseSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05FA246A24BB867E00FB6809 /* FirebaseSession.swift */; };
@@ -75,6 +76,7 @@
 		05B981E224C4015B002C729A /* SystemObjectsAVENTURA.JSON */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = SystemObjectsAVENTURA.JSON; sourceTree = "<group>"; };
 		05B981E724C410C4002C729A /* JacksonRequirements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JacksonRequirements.swift; sourceTree = "<group>"; };
 		05B981E924C413A6002C729A /* AventuraRequirements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AventuraRequirements.swift; sourceTree = "<group>"; };
+		05B981EB24C41C35002C729A /* SinaiRequirements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SinaiRequirements.swift; sourceTree = "<group>"; };
 		05D79ED824C331E9009D79D2 /* About.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = About.swift; sourceTree = "<group>"; };
 		05D79EDA24C34A73009D79D2 /* AboutImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutImages.swift; sourceTree = "<group>"; };
 		05FA246A24BB867E00FB6809 /* FirebaseSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseSession.swift; sourceTree = "<group>"; };
@@ -219,6 +221,7 @@
 			children = (
 				05B981E724C410C4002C729A /* JacksonRequirements.swift */,
 				05B981E924C413A6002C729A /* AventuraRequirements.swift */,
+				05B981EB24C41C35002C729A /* SinaiRequirements.swift */,
 			);
 			path = Requirements;
 			sourceTree = "<group>";
@@ -596,6 +599,7 @@
 			files = (
 				10A710D223D77AFD004C83B2 /* ScanImageViewer.swift in Sources */,
 				10DE427323D428EA00847E5F /* AppDelegate.swift in Sources */,
+				05B981EC24C41C35002C729A /* SinaiRequirements.swift in Sources */,
 				10A710D423DF5CA0004C83B2 /* ScanView.swift in Sources */,
 				10A710BC23D512C1004C83B2 /* InfoScreen.swift in Sources */,
 				109119EB23D4F93600AA7AE9 /* SystemObject.swift in Sources */,
