@@ -103,7 +103,7 @@
         "id": 9,
         "type": "Loop",
         "systemID": 1,
-        "dostring": "Save a loop or video.\nThe interventricular septum should be vertical.\nMeasureme at level of valve anulus",
+        "dostring": "Save a loop or video.\nThe interventricular septum should be vertical.\nMeasurement at level of valve anulus",
         "optimize": "Drag and drop the probe from the parasternal short axis view. ",
         "measure": "Normal right ventricle size is 0.6 of left ventricle.",
         "images": [],

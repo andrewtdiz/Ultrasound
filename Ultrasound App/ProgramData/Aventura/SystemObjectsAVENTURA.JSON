@@ -35,7 +35,7 @@
         "icon": "gallbladderIcon"
     },
     {
-        "name": "HIMAP",
+        "name": "HIMAP-ED",
         "id": 5,
         "desc": "Is the patient in shock?\nIs this obstructive shock?\nIs this hemorrhagic or hypovolemic shock? \nIs this distributive shock?\nIs there evidence of pulmonary embolism or pneumonia?\nIs this cardiogenic shock?",
         "views": [],

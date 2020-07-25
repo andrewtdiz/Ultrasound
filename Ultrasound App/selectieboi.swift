@@ -14,6 +14,7 @@ struct selectieboi: View {
     var categories = ["Jackson Memorial", "Mount Sinai Medical", "Aventura Hospital", "Saint Lucie Medical", "UCF Oceola", "UF Jacksonville"]
     @Binding var category: Int
     
+    
     var body: some View {
         VStack() {
             HStack() {
@@ -21,9 +22,9 @@ struct selectieboi: View {
                 
             }.padding(.vertical)
             if(categories[category]=="Aventura Hospital") {
-                SinaiRequirements()
-            } else if(categories[category]=="Mount Sinai Medical") {
                 AventuraRequirements()
+            } else if(categories[category]=="Mount Sinai Medical") {
+                SinaiRequirements()
             } else if(categories[category]=="Jackson Memorial") {
                 JacksonRequirements()
             } else {

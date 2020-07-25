@@ -17,9 +17,26 @@ struct AventuraRequirements: View {
                 Spacer()
             }
             HStack() {
-                Text("Record examinations for review and comparison and review to stock “normal” images.")
+                Text("Educational Scans: Upload to Q-path with report and documentation in medical record. ")
                 .font(.body)
                     Spacer()
+            }
+            HStack() {
+                Text("Credentialing")
+                   .font(.subheadline)
+               .foregroundColor(Color.black.opacity(0.5))
+                Spacer()
+            }.padding(.vertical)
+           
+            HStack(){
+                Text("Number per US application: 25.")
+                    .font(.body)
+                Spacer()
+            }
+            HStack() {
+                Text("Total procedural scans: 10. ")
+                .font(.body).padding(.bottom).padding(.horizontal,0)
+                Spacer()
             }
             
         }.padding(.horizontal).padding(.vertical,0)

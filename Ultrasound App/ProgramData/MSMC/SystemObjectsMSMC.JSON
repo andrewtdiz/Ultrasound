@@ -23,7 +23,7 @@
     {
         "name": "EFAST",
         "id": 3,
-        "desc": "Is there free fluid in the abdomen?\nIs there fluid in the pericardium?\nIs there fluid in the thorax?\nIs there a pneumothorax?",
+        "desc": "*For trauma indications must obtain all*\n*For indications other than trauma for free fluid (ruptured ectopic) only need RUQ/LUQ/Suprapubic*\nIs there free fluid in the abdomen?\nIs there fluid in the pericardium?\nIs there fluid in the thorax?\nIs there a pneumothorax?",
         "views": [],
         "icon": "efastIcon"
     },

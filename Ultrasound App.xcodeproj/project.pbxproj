@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		055C9ED124C7B88000AE1287 /* SystemObjectsSTLUCIE.JSON in Resources */ = {isa = PBXBuildFile; fileRef = 055C9ECE24C7B88000AE1287 /* SystemObjectsSTLUCIE.JSON */; };
+		055C9ED224C7B88000AE1287 /* SystemImagesSTLUCIE.JSON in Resources */ = {isa = PBXBuildFile; fileRef = 055C9ECF24C7B88000AE1287 /* SystemImagesSTLUCIE.JSON */; };
+		055C9ED324C7B88000AE1287 /* SystemViewsSTLUCIE.JSON in Resources */ = {isa = PBXBuildFile; fileRef = 055C9ED024C7B88000AE1287 /* SystemViewsSTLUCIE.JSON */; };
+		056D309B24CBE3880073559F /* Institution.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056D309A24CBE3880073559F /* Institution.swift */; };
 		0596464F24C3EF2D00F66B9B /* SystemViewsMSMC.JSON in Resources */ = {isa = PBXBuildFile; fileRef = 0596464C24C3EF2D00F66B9B /* SystemViewsMSMC.JSON */; };
 		0596465024C3EF2D00F66B9B /* SystemImagesMSMC.JSON in Resources */ = {isa = PBXBuildFile; fileRef = 0596464D24C3EF2D00F66B9B /* SystemImagesMSMC.JSON */; };
 		0596465124C3EF2D00F66B9B /* SystemObjectsMSMC.JSON in Resources */ = {isa = PBXBuildFile; fileRef = 0596464E24C3EF2D00F66B9B /* SystemObjectsMSMC.JSON */; };
@@ -68,6 +72,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		055C9ECE24C7B88000AE1287 /* SystemObjectsSTLUCIE.JSON */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = SystemObjectsSTLUCIE.JSON; sourceTree = "<group>"; };
+		055C9ECF24C7B88000AE1287 /* SystemImagesSTLUCIE.JSON */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = SystemImagesSTLUCIE.JSON; sourceTree = "<group>"; };
+		055C9ED024C7B88000AE1287 /* SystemViewsSTLUCIE.JSON */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = SystemViewsSTLUCIE.JSON; sourceTree = "<group>"; };
+		056D309A24CBE3880073559F /* Institution.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Institution.swift; sourceTree = "<group>"; };
 		0596464C24C3EF2D00F66B9B /* SystemViewsMSMC.JSON */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = SystemViewsMSMC.JSON; sourceTree = "<group>"; };
 		0596464D24C3EF2D00F66B9B /* SystemImagesMSMC.JSON */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = SystemImagesMSMC.JSON; sourceTree = "<group>"; };
 		0596464E24C3EF2D00F66B9B /* SystemObjectsMSMC.JSON */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = SystemObjectsMSMC.JSON; sourceTree = "<group>"; };
@@ -202,6 +210,9 @@
 		0596464724C3EE7500F66B9B /* StLucie */ = {
 			isa = PBXGroup;
 			children = (
+				055C9ECF24C7B88000AE1287 /* SystemImagesSTLUCIE.JSON */,
+				055C9ECE24C7B88000AE1287 /* SystemObjectsSTLUCIE.JSON */,
+				055C9ED024C7B88000AE1287 /* SystemViewsSTLUCIE.JSON */,
 			);
 			path = StLucie;
 			sourceTree = "<group>";
@@ -292,6 +303,7 @@
 				109119EA23D4F93600AA7AE9 /* SystemObject.swift */,
 				109119EC23D4F96200AA7AE9 /* SystemImage.swift */,
 				109119EE23D4F9A500AA7AE9 /* SystemViewObject.swift */,
+				056D309A24CBE3880073559F /* Institution.swift */,
 				109119F023D4FBA400AA7AE9 /* fetcher.swift */,
 				10A710BB23D512C1004C83B2 /* InfoScreen.swift */,
 				05FA246A24BB867E00FB6809 /* FirebaseSession.swift */,
@@ -463,13 +475,16 @@
 				0596465024C3EF2D00F66B9B /* SystemImagesMSMC.JSON in Resources */,
 				10A710C223D51791004C83B2 /* SystemImages.JSON in Resources */,
 				0596464F24C3EF2D00F66B9B /* SystemViewsMSMC.JSON in Resources */,
+				055C9ED224C7B88000AE1287 /* SystemImagesSTLUCIE.JSON in Resources */,
 				0596465124C3EF2D00F66B9B /* SystemObjectsMSMC.JSON in Resources */,
 				05B981E324C4015B002C729A /* SystemViewsAVENTURA.JSON in Resources */,
 				05B981E524C4015B002C729A /* SystemObjectsAVENTURA.JSON in Resources */,
 				10DE427C23D428EB00847E5F /* Preview Assets.xcassets in Resources */,
+				055C9ED324C7B88000AE1287 /* SystemViewsSTLUCIE.JSON in Resources */,
 				10A710C023D514CC004C83B2 /* SystemViews.JSON in Resources */,
 				10DE427923D428EB00847E5F /* Assets.xcassets in Resources */,
 				05FA246F24BB88D300FB6809 /* GoogleService-Info.plist in Resources */,
+				055C9ED124C7B88000AE1287 /* SystemObjectsSTLUCIE.JSON in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -603,6 +618,7 @@
 				10A710D423DF5CA0004C83B2 /* ScanView.swift in Sources */,
 				10A710BC23D512C1004C83B2 /* InfoScreen.swift in Sources */,
 				109119EB23D4F93600AA7AE9 /* SystemObject.swift in Sources */,
+				056D309B24CBE3880073559F /* Institution.swift in Sources */,
 				109119EF23D4F9A500AA7AE9 /* SystemViewObject.swift in Sources */,
 				10DE427523D428EA00847E5F /* SceneDelegate.swift in Sources */,
 				109119F123D4FBA400AA7AE9 /* fetcher.swift in Sources */,

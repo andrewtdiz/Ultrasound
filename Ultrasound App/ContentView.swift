@@ -13,20 +13,29 @@ struct ContentView: View {
     let defaults = UserDefaults.standard
     @State private var selection = false
     @State private var aboutSection = false
+    var fbSession = FirebaseSession()
+    var categories = ["Jackson Memorial", "Mount Sinai Medical", "Aventura Hospital", "Saint Lucie Medical", "UCF Oceola", "UF Jacksonville"]
+    
+    
     @State var category = -1 {
         didSet {
             print("DidSet: " , category)
-            switch category {
-            case 0:
-                systemsData = combineSysAndViews(viewsData: load("SystemViews.JSON"), systemsData:load("SystemObjects.JSON"), systemsImages:load("SystemImages.JSON"))
-                break;
-            case 1:
-                systemsData = combineSysAndViews(viewsData: load("SystemViewsMSMC.JSON"), systemsData:load("SystemObjectsMSMC.JSON"), systemsImages:load("SystemImagesMSMC.JSON"))
-                break;
-            default:
-                systemsData = combineSysAndViews(viewsData: load("SystemViews.JSON"), systemsData:load("SystemObjects.JSON"), systemsImages:load("SystemImages.JSON"))
-                break;
-            }
+            fbSession.getInstitutionData(institution: categories[category])
+//            switch category {
+//            case 0:
+//                systemsData = combineSysAndViews(viewsData: load("SystemViews.JSON"), systemsData:load("SystemObjects.JSON"), systemsImages:load("SystemImages.JSON"))
+//                break;
+//            case 1:
+//                systemsData = combineSysAndViews(viewsData: load("SystemViewsMSMC.JSON"), systemsData:load("SystemObjectsMSMC.JSON"), systemsImages:load("SystemImagesMSMC.JSON"))
+//                break;
+//            case 2:
+//                systemsData = combineSysAndViews(viewsData: load("SystemViewsAVENTURA.JSON"), systemsData:load("SystemObjectsAVENTURA.JSON"), systemsImages:load("SystemImagesAVENTURA.JSON"))
+//                break;
+//            default:
+//                systemsData = combineSysAndViews(viewsData: load("SystemViews.JSON"), systemsData:load("SystemObjects.JSON"), systemsImages:load("SystemImages.JSON"))
+//                break;
+//            }
+//            fbSession.setFirebaseData(category: category)
         }
     }
     @State var categoryFirst = 0
@@ -43,7 +52,6 @@ struct ContentView: View {
         .onAppear(){
             self.userID = self.defaults.object(forKey: "userID") as? String ?? ""
             self.tempUserID = self.userID
-            print("Creebo-->" , self.userID,"<---")
             self.category = self.defaults.object(forKey: "category") as? Int ?? -1
             if (self.category == -1){
                 self.selection = true
@@ -68,6 +76,14 @@ struct ContentView: View {
             VStack{
                 if(self.userID == "" && self.selection) {
                     VStack(spacing: 0) {
+                        
+                        HStack() {
+                            Spacer()
+                            Image(systemName: "arrow.down.doc.fill").foregroundColor(Color.red)
+                            Text("Swipe down when ID entered").font(.footnote).foregroundColor(Color.red)
+                            Spacer()
+                        }.opacity(self.tempUserID.count>=6 ? 1 : 0).offset(y: self.tempUserID.count>=6 ? 0:50).animation(.easeOut)
+                        
                         Spacer()
                         
                         Text("Your One-Time ID").font(.title)
@@ -101,7 +117,7 @@ struct ContentView: View {
                         }
                     }){
                         Text("Save changes")
-                            .opacity((self.category != self.categoryFirst) ? 1 : 0.5 )
+                            .opacity((self.category != self.categoryFirst) ? 1 : 0 )
                     }
                 }
                 Spacer()
