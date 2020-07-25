@@ -1204,6 +1204,22 @@
     {
         "name": "Posterior",
         "id": 130,
+        "image": "12_652_0",
+        "viewID": 652,
+        "desc": " ",
+        "type": "Loop"
+    },
+    {
+        "name": "Posterior",
+        "id": 131,
+        "image": "12_652_1",
+        "viewID": 652,
+        "desc": " ",
+        "type": "Labeled"
+    },
+    {
+        "name": "Posterior",
+        "id": 130,
         "image": "12_65_0",
         "viewID": 65,
         "desc": " ",
@@ -1214,6 +1230,38 @@
         "id": 131,
         "image": "12_65_1",
         "viewID": 65,
+        "desc": " ",
+        "type": "Labeled"
+    },
+    {
+        "name": "Posterior",
+        "id": 130,
+        "image": "12_652_0",
+        "viewID": 652,
+        "desc": " ",
+        "type": "Loop"
+    },
+    {
+        "name": "Posterior",
+        "id": 131,
+        "image": "12_652_1",
+        "viewID": 652,
+        "desc": " ",
+        "type": "Labeled"
+    },
+    {
+        "name": "CVP/Diaphragm",
+        "id": 132,
+        "image": "12_662_0",
+        "viewID": 662,
+        "desc": " ",
+        "type": "Loop"
+    },
+    {
+        "name": "CVP/Diaphragm",
+        "id": 133,
+        "image": "12_662_1",
+        "viewID": 662,
         "desc": " ",
         "type": "Labeled"
     },

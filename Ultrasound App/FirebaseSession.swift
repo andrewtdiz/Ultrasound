@@ -16,58 +16,68 @@ class FirebaseSession : ObservableObject{
     
     let db = Firestore.firestore()
     let defaults = UserDefaults.standard
+    @Published var categories : [String] = []
+    
+    @Published var institutionData : Institution
+    
     
     init() {
-//        db.collection("users").addDocument(data: [
-//            "user_data" : self.getTodayString(),
-//        ])
+        let systemsData = combineSysAndViews(viewsData: load("SystemViews.JSON"), systemsData:load("SystemObjects.JSON"), systemsImages:load("SystemImages.JSON"))
+        institutionData = Institution(id: 0, name: "Jackson Memorial", requirements: ["Number needed to graduate: 250 scans.", "Numbers per JMH adult/pediatric ED rotation: 10.", "Educational scans: Upload to Q-path.", "Direct patient care scans: Upload to PACS and Q-path.", "US machines capable of PACS/Q-path upload:", "JMH Adult ED, JMH Pediatric ED, Ryder Trauma Center."], credentialing: ["Number per US application: 25 scans.", "Number of HIMAP/RUSH and Triple Scan: 10 scans each.", "Total procedural scans: 5. "], systemsData: systemsData)
+        getCategories()
         
     }
+    func getCategories(){
+        db.collection("Institutions").document("InstitutionData").getDocument { (document, error) in
+            if let document = document, document.exists {
+                let dataDescription = document.data()!["Categories"]
+                print("Document data: \(dataDescription)")
+                self.categories = dataDescription as! [String]
+            } else {
+                print("Document does not exist")
+            }
+        }
+
+    }
     
-//    func setFirebaseData(category: Int){
-//
-//        let categories = ["Jackson Memorial", "Mount Sinai Medical", "Aventura Hospital", "Saint Lucie Medical", "UCF Oceola", "UF Jacksonville"]
-//
-//        var reqs = [String : [String]]()
-//
-//        reqs["Jackson Memorial"] = ["Number needed to graduate: 250 scans.", "Numbers per JMH adult/pediatric ED rotation: 10.", "Educational scans: Upload to Q-path.", "Direct patient care scans: Upload to PACS and Q-path.", "US machines capable of PACS/Q-path upload:", "JMH Adult ED, JMH Pediatric ED, Ryder Trauma Center."]
-//        reqs["Mount Sinai Medical"] = ["Number needed to graduate: 250 scans."]
-//        reqs["Aventura Hospital"] = ["Number needed to graduate: 250 scans."]
-//        reqs["Saint Lucie Medical"] = ["Number needed to graduate: 250 scans."]
-//        reqs["UCF Oceola"] = ["Number needed to graduate: 250 scans."]
-//        reqs["UF Jacksonville"] = ["Number needed to graduate: 250 scans."]
-//
-//
-//        var creds = [String : [String]]()
-//
-//        creds["Jackson Memorial"] = ["Number per US application: 25 scans.", "Number of HIMAP/RUSH and Triple Scan: 10 scans each.", "Total procedural scans: 5. "]
-//        creds["Mount Sinai Medical"] = ["Number per US application: 25 scans."]
-//        creds["Aventura Hospital"] = ["Number per US application: 25 scans."]
-//        creds["Saint Lucie Medical"] = ["Number per US application: 25 scans."]
-//        creds["UCF Oceola"] = ["Number per US application: 25 scans."]
-//        creds["UF Jacksonville"] = ["Number per US application: 25 scans."]
-//
-//        if (category >= 0){
-//            let temp = Institution(id: category, name: categories[category], requirements: reqs[categories[category]]!, credentialing: creds[categories[category]]!, systemsData: systemsData)
-//            let jsonData = try! FirestoreEncoder().encode(temp)
-//            db.collection("Institutions").document(categories[category]).setData(jsonData)
-//                print(jsonData)
-//        }
-//    }
     
     func getInstitutionData(category: Int){
         db.collection("Institutions").whereField("id", isEqualTo: category)
             .getDocuments() { (querySnapshot, err) in
                 if let err = err {
                     print("Error getting documents: \(err)")
+                    do {
+                        self.institutionData = try FirebaseDecoder().decode(Institution.self, from: (self.defaults.object(forKey: self.categories[category]) as? Institution)!)
+                        print("Successfull pull from local data!")
+                    } catch let error {
+                        print(error)
+                    }
                 } else {
                     for document in querySnapshot!.documents {
                         print("\(document.documentID)")
                         let dataDescription = document.data()
                         do {
-                            institutionData = try FirebaseDecoder().decode(Institution.self, from: dataDescription)
-                            self.defaults.set(institutionData,forKey: institutionData.name)
-    //                            print(model)
+                            self.institutionData = try FirebaseDecoder().decode(Institution.self, from: dataDescription)
+                            self.defaults.set(dataDescription,forKey: self.institutionData.name)
+                            print("Successfull pull and save!")
+                            print(self.institutionData.systemsData[1])
+                            self.db.collection("Institutions").document(document.documentID).addSnapshotListener { docSnap, error in
+                                guard let document = docSnap else {
+                                    print("Error fetiching document")
+                                    return
+                                }
+                                guard let data = document.data() else {
+                                    print("document data empty")
+                                    return
+                                }
+                                do {
+                                    self.institutionData = try FirebaseDecoder().decode(Institution.self, from: data)
+                                    self.defaults.set(data,forKey: self.institutionData.name)
+                                    print("On change successfull pull and save!")
+                                } catch {
+                                    print("Error decoding")
+                                }
+                            }
                         } catch let error {
                             print(error)
                         }
@@ -97,5 +107,40 @@ class FirebaseSession : ObservableObject{
 
    }
 
-    
+
+        
+    //    func setCategories(cats: [String]){
+    //        db.collection("Institutions").document("InstitutionData").setData(["Categories" : cats])
+    //    }
+        
+    //    func setFirebaseData(category: Int){
+    //
+    //        let categories = ["Jackson Memorial", "Mount Sinai Medical", "Aventura Hospital", "Saint Lucie Medical", "UCF Oceola", "UF Jacksonville"]
+    //
+    //        var reqs = [String : [String]]()
+    //
+    //        reqs["Jackson Memorial"] = ["Number needed to graduate: 250 scans.", "Numbers per JMH adult/pediatric ED rotation: 10.", "Educational scans: Upload to Q-path.", "Direct patient care scans: Upload to PACS and Q-path.", "US machines capable of PACS/Q-path upload:", "JMH Adult ED, JMH Pediatric ED, Ryder Trauma Center."]
+    //        reqs["Mount Sinai Medical"] = ["Number needed to graduate: 250 scans."]
+    //        reqs["Aventura Hospital"] = ["Number needed to graduate: 250 scans."]
+    //        reqs["Saint Lucie Medical"] = ["Number needed to graduate: 250 scans."]
+    //        reqs["UCF Oceola"] = ["Number needed to graduate: 250 scans."]
+    //        reqs["UF Jacksonville"] = ["Number needed to graduate: 250 scans."]
+    //
+    //
+    //        var creds = [String : [String]]()
+    //
+    //        creds["Jackson Memorial"] = ["Number per US application: 25 scans.", "Number of HIMAP/RUSH and Triple Scan: 10 scans each.", "Total procedural scans: 5. "]
+    //        creds["Mount Sinai Medical"] = ["Number per US application: 25 scans."]
+    //        creds["Aventura Hospital"] = ["Number per US application: 25 scans."]
+    //        creds["Saint Lucie Medical"] = ["Number per US application: 25 scans."]
+    //        creds["UCF Oceola"] = ["Number per US application: 25 scans."]
+    //        creds["UF Jacksonville"] = ["Number per US application: 25 scans."]
+    //
+    //        if (category >= 0){
+    //            let temp = Institution(id: category, name: categories[category], requirements: reqs[categories[category]]!, credentialing: creds[categories[category]]!, systemsData: systemsData)
+    //            let jsonData = try! FirestoreEncoder().encode(temp)
+    //            db.collection("Institutions").document(categories[category]).setData(jsonData)
+    //                print(jsonData)
+    //        }
+    //    }
 }

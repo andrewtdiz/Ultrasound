@@ -40,8 +40,3 @@ struct SoftMSKVue: View {
     }
 }
 
-struct SoftMSKVue_Previews: PreviewProvider {
-    static var previews: some View {
-        SoftMSKVue(system: systemsData[11])
-    }
-}

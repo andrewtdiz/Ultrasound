@@ -8,9 +8,7 @@
 
 import Foundation
 
-var systemsData = combineSysAndViews(viewsData: load("SystemViews.JSON"), systemsData:load("SystemObjects.JSON"), systemsImages:load("SystemImages.JSON"))
-var institutionData = Institution(id: 0, name: "Jackson Memorial", requirements: ["Number needed to graduate: 250 scans.", "Numbers per JMH adult/pediatric ED rotation: 10.", "Educational scans: Upload to Q-path.", "Direct patient care scans: Upload to PACS and Q-path.", "US machines capable of PACS/Q-path upload:", "JMH Adult ED, JMH Pediatric ED, Ryder Trauma Center."], credentialing: ["Number per US application: 25 scans.", "Number of HIMAP/RUSH and Triple Scan: 10 scans each.", "Total procedural scans: 5. "], systemsData: systemsData)
-
+var tempSystems = combineSysAndViews(viewsData: load("SystemViews.JSON"), systemsData:load("SystemObjects.JSON"), systemsImages:load("SystemImages.JSON"))
 
 func load<T:Decodable>(_ filename:String, as type:T.Type = T.self) -> T {
     // reading the JSON of events

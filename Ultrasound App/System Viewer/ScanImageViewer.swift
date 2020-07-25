@@ -113,9 +113,3 @@ struct ScanImageViewer: View {
     }
 }
 
-
-struct ScanImageViewer_Previews: PreviewProvider {
-    static var previews: some View {
-        ScanImageViewer(images: systemsData[8].views[2].images)
-    }
-}

@@ -11,15 +11,18 @@ import Firebase
 
 struct SystemView: View {
     
-    var system: SystemObject
+    var systemID:Int
     var tabWidth = 60
     var offst = 5
     
+    @State var system: SystemObject
     @State var scrollState = CGFloat.zero
     @State var containerState = CGFloat.zero
     @State var page = 0
     @State var innerScrolling = false
     @State var startLoc = CGPoint(x:0, y:0)
+    
+    @EnvironmentObject var firebaseSession : FirebaseSession
     var changePageDist = UIScreen.main.bounds.width/4
     var body: some View {
         
@@ -73,7 +76,7 @@ struct SystemView: View {
                             ForEach(system.views, id: \.self) { view in
                                 VStack(){
                                     if (view.type=="System") {
-                                        link(label: view.name, destination: SystemView(system:  systemsData[findSystemID(systemName: view.system)]), first: false, view: view)
+                                        link(label: view.name, destination: SystemView(systemID:  self.findSystemID(systemName: view.system), system: self.findSystemByName(systemName: view.system)), first: false, view: view)
                                     } else {
                                         link(label: view.name, destination: ScanView(scan: view), first: false, view: view)
                                     }
@@ -89,6 +92,7 @@ struct SystemView: View {
                 
             }.navigationBarTitle(Text(system.name)).onAppear(){
                 Analytics.logEvent("Opened_application", parameters: ["application" : self.system.name])
+                self.system = self.firebaseSession.institutionData.systemsData[self.systemID]
         }.onDisappear(){
                 Analytics.logEvent("Closed_application", parameters: ["application" : self.system.name])
         }
@@ -97,17 +101,28 @@ struct SystemView: View {
         
     }
     
+    func findSystemByName(systemName: String) -> SystemObject{
+        for i in 0...firebaseSession.institutionData.systemsData.count{
+            if (firebaseSession.institutionData.systemsData[i].name == systemName){
+                print("Got the system: " , i)
+                return firebaseSession.institutionData.systemsData[i]
+            }
+        }
+        return firebaseSession.institutionData.systemsData[0]
+    }
+    
+    func findSystemID(systemName: String) -> Int{
+        for i in 0...firebaseSession.institutionData.systemsData.count{
+            if (firebaseSession.institutionData.systemsData[i].name == systemName){
+                print("Got the system: " , i)
+                return i
+            }
+        }
+        return 0
+    }
 }
 
-func findSystemID(systemName: String) -> Int{
-    for i in 0...systemsData.count{
-        if (systemsData[i].name == systemName){
-            print("Got the system: " , i)
-            return i
-        }
-    }
-    return 0
-}
+
 
 
 func link<Destination: View>(label: String, destination: Destination, first: Bool, view: SystemViewObject) -> some View {
@@ -182,10 +197,4 @@ func tabOffset(page: Int, pages: Int, tabWidth: Int, offst: Int) -> CGFloat {
         return CGFloat(page-Int(Double(pages/2) + 0.5))*CGFloat((tabWidth + offst))
     }
     
-}
-
-struct SystemView_Previews: PreviewProvider {
-    static var previews: some View {
-        SystemView(system: systemsData[1])
-    }
 }

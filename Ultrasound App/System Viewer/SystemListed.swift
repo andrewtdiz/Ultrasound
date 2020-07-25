@@ -19,11 +19,13 @@ struct SystemListed: View {
     
     @Binding var activeSheet: ActiveSheet
     
+    @EnvironmentObject var firebaseSession : FirebaseSession
+    
     
     var body: some View {
         NavigationView {
-            List(systemsData) { system in
-                NavigationLink(destination: SystemView(system:system)) {
+            List(firebaseSession.institutionData.systemsData) { system in
+                NavigationLink(destination: SystemView(systemID: self.findSystemID(systemName: system.name),system: system).environmentObject(self.firebaseSession)) {
                     HStack() {
                         Image(system.icon)
                         .resizable()
@@ -59,6 +61,16 @@ struct SystemListed: View {
         )
             
             }.navigationViewStyle(StackNavigationViewStyle())
+    }
+    
+    func findSystemID(systemName: String) -> Int{
+        for i in 0...firebaseSession.institutionData.systemsData.count{
+            if (firebaseSession.institutionData.systemsData[i].name == systemName){
+                print("Got the system: " , i)
+                return i
+            }
+        }
+        return 0
     }
 }
 

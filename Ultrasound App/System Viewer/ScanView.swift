@@ -71,9 +71,4 @@ struct ScanView: View {
     }
 }
 
-struct ScanView_Previews: PreviewProvider {
-    static var previews: some View {
-        ScanView(scan: systemsData[1].views[0])
-    }
-}
 }

@@ -11,29 +11,57 @@ import Firebase
 
 struct selectieboi: View {
     
-    var categories = ["Jackson Memorial", "Mount Sinai Medical", "Aventura Hospital", "Saint Lucie Medical", "UCF Oceola", "UF Jacksonville"]
+    @EnvironmentObject var firebaseSession : FirebaseSession
+    
     @Binding var category: Int
     
     
     var body: some View {
         VStack() {
             HStack() {
-                Text(categories[category]).font(.title)
+                Text(firebaseSession.institutionData.name).font(.title)
                 
             }.padding(.vertical)
-            if(categories[category]=="Aventura Hospital") {
-                AventuraRequirements()
-            } else if(categories[category]=="Mount Sinai Medical") {
-                SinaiRequirements()
-            } else if(categories[category]=="Jackson Memorial") {
-                JacksonRequirements()
-            } else {
-                HStack() {
-                    Text("Number needed to graduate: 250 scans.")
-                    .font(.body)
-                    Spacer()
+//            if(firebaseSession.categories[category]=="Aventura Hospital") {
+//                AventuraRequirements()
+//            } else if(firebaseSession.categories[category]=="Mount Sinai Medical") {
+//                SinaiRequirements()
+//            } else if(firebaseSession.categories[category]=="Jackson Memorial") {
+//                JacksonRequirements()
+//            } else {
+//                HStack() {
+//                    Text("Number needed to graduate: 250 scans.")
+//                    .font(.body)
+//                    Spacer()
+//                }
+//            }
+            
+            VStack(){
+                ForEach(firebaseSession.institutionData.requirements,id: \.self) { req in
+                    HStack() {
+                        Text(req)
+                        .font(.body)
+                        Spacer()
+                    }
                 }
-            }
+            }.padding(.horizontal)
+
+            HStack() {
+                Text("Credentialing")
+                   .font(.subheadline)
+               .foregroundColor(Color.black.opacity(0.5))
+                Spacer()
+            }.padding()
+//
+            VStack(){
+                ForEach(firebaseSession.institutionData.requirements,id: \.self) { req in
+                    HStack() {
+                        Text(req)
+                        .font(.body)
+                        Spacer()
+                    }
+                }
+            }.padding(.horizontal)
             
             Spacer()
 //            HStack() {
@@ -42,8 +70,8 @@ struct selectieboi: View {
 //            }.padding()
             
             Picker(selection: $category, label: Text("")) {
-                           ForEach(0 ..< categories.count) {
-                            Text(self.categories[$0]).foregroundColor(Color.black).multilineTextAlignment(.leading)
+                           ForEach(0 ..< firebaseSession.categories.count) {
+                            Text(self.firebaseSession.categories[$0]).foregroundColor(Color.black).multilineTextAlignment(.leading)
                            }
             }
         }.onAppear(){

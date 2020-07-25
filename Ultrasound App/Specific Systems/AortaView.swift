@@ -52,10 +52,5 @@ struct ListFooter: View {
     }
 }
 
-struct AortaView_Previews: PreviewProvider {
-    static var previews: some View {
-        AortaView(system: systemsData[0])
-    }
-}
 
 
