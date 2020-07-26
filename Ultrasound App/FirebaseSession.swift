@@ -60,7 +60,7 @@ class FirebaseSession : ObservableObject{
                             self.institutionData = try FirebaseDecoder().decode(Institution.self, from: dataDescription)
                             self.defaults.set(dataDescription,forKey: self.institutionData.name)
                             print("Successfull pull and save!")
-                            print(self.institutionData.systemsData[1])
+//                            print(dataDescription)
                             self.db.collection("Institutions").document(document.documentID).addSnapshotListener { docSnap, error in
                                 guard let document = docSnap else {
                                     print("Error fetiching document")
